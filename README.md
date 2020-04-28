@@ -1,15 +1,15 @@
 # Rush Racing
 Rush Racing - an Android and PC racing game. Developed by The Fast and The Curious team for COMP602/11 Semester 1 2020 assignment.
 
-Overview:
+## Overview:
 Racing games have been a concept in the gaming world for decades and have entered the mobile gaming world several years ago. Over the years, newer technology has been developed to improve the overall gaming experience for these racing games. 
 Our project ‘Rush Racing is to develop a third-person point-of-view racing game available on mobile platforms. The game will have multiple different stages with a range of different terrain options, including ‘urban’, ‘desert’, ‘forest’, and more. The game will also have multiple different modes. There is a monetary system in which each win will award the player with money to buy upgrades or new cars.
 
-Platform: Android, PC
-Engine: Unity
-Language: C#
+**Platform:** Android, PC
+**Engine:** Unity
+**Language:** C#
 
-Our key game and technological features will include:
+## Our key game and technological features will include:
 •	A clear user interface that will display the speed and controls for gameplay. The user interface will be eye-catching yet not intrusive, as to maximise focus on gameplay.
 •	Motion sensitive option (for the mobile version), for players who prefer to control turning by moving/tilting their phone.
 •	Touch control option, for players who prefer to control turning using the screen buttons.
