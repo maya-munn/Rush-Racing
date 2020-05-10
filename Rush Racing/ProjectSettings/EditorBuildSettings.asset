@@ -6,18 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menus/MainMenu 1.unity
-    guid: a36dd226298a8ce469a1449f26002195
+    path: Assets/Scenes/Menu/MainMenu.unity
+    guid: 4e8f1d88bf18a8e4eb8dbc79b4c1fb5a
   - enabled: 1
-    path: Assets/Scenes/Menus/Garage.unity
-    guid: a0295069a300f3c4f9989e5b44004bbd
+    path: Assets/Scenes/Menu/FreePlayMode.unity
+    guid: d46f154e1ffb8194981f5d10992d56b1
   - enabled: 1
-    path: Assets/Scenes/Menus/Play Menu.unity
-    guid: 0dc63802e6e34684a8c45baeeec090d7
+    path: Assets/Scenes/Menu/TournamentMode.unity
+    guid: 04937dc82b591f8469d3b570461d85b2
   - enabled: 1
-    path: Assets/Scenes/Menus/Free play menu.unity
-    guid: 4e83fc6a19a858a4e8a2c491c6a81448
-  - enabled: 1
-    path: Assets/Scenes/Menus/Tournament.unity
-    guid: aa8f10c95a5b5c149933f48319d1a87c
+    path: Assets/Scenes/Menu/Garage.unity
+    guid: 92f6380300c089e45a9501348064f299
   m_configObjects: {}
