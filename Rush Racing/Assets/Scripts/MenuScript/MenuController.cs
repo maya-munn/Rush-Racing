@@ -8,23 +8,28 @@ public class MenuController : MonoBehaviour
 
     public void FreePlayMode()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(1);
     }
 
     public void TournamentMode()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        SceneManager.LoadScene(2);
     }
 
 
     public void GarageScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+        SceneManager.LoadScene(3);
     }
 
     public void QuitButton()
     {
         Application.Quit();
         Debug.Log("Quit");
+    }
+
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
