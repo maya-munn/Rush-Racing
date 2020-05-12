@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu/Garage.unity
     guid: 92f6380300c089e45a9501348064f299
+  - enabled: 1
+    path: Assets/Scenes/Tracks/TestScene.unity
+    guid: 24914f6c83d9ffe49900dd20e1b02422
   m_configObjects: {}

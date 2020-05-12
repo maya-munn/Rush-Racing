@@ -32,4 +32,8 @@ public class MenuController : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+    public void StartButton()
+    {
+        SceneManager.LoadScene(4);
+    }
 }
