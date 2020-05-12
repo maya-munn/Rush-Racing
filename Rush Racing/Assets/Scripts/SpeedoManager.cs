@@ -23,7 +23,7 @@ public class SpeedoManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        carSpeed = RR.strengthCoefficient;
+        carSpeed = RR.speed;
         updateNeedle();
     }
 
@@ -32,7 +32,7 @@ public class SpeedoManager : MonoBehaviour
     public void updateNeedle()
     {
         currentPos = startPos - endPos;
-        float temp = (carSpeed - 19800) / 180;
+        float temp = (carSpeed*3.6f) / 180;
         needle.transform.eulerAngles = new Vector3(0, 0, (startPos - temp * currentPos));
     }
 }

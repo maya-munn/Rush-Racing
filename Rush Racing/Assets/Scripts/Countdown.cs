@@ -3,20 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Author: Immanuel Siregar
+//This code was heavily inspired by the code from Jimmy Vegas' Unity Racing Game tutorial.
+
 public class Countdown : MonoBehaviour
 {
-
+    //Connects to the GameObjects and audio files in the coundown animation
     public GameObject CountDown;
     public AudioSource GetReady;
     public AudioSource GoAudio;
     public GameObject LapTimer;
 
-    // Start is called before the first frame update
+    //On start, calls the animation
     void Start()
     {
         StartCoroutine(CountStart());
     }
 
+    //Basically the structure of what occurs during the animation before the start.
+    //Accesses the countdown UI object to display the countdown numbers.
     IEnumerator CountStart()
     {
         yield return new WaitForSeconds(0.5f);

@@ -28,6 +28,7 @@ public class CarController : MonoBehaviour
     public float strengthCoefficient = 20000f;  //Torque
     public float brakeStrength;                 //Strength of braking (brake torque)
     public float maxTurn = 20f;                 //Degrees
+    public float speed;
 
     public Transform centreOfMass;              //Centre of mass
     public Rigidbody rigidBody;
@@ -77,6 +78,8 @@ public class CarController : MonoBehaviour
                 //If not braking, move the car
                 wheel.motorTorque = strengthCoefficient * Time.deltaTime * im.throttle;
                 wheel.brakeTorque = 0f; //If driving, do not set any brake
+                
+
             }
         }
 
@@ -96,7 +99,7 @@ public class CarController : MonoBehaviour
             float magnitude = rigidBody.velocity.magnitude; //metres per second
             float circumference = 2 * Mathf.PI * 0.33f; //circumference of any wheel. 0.33 is default radius for wheel
             float direction = transform.InverseTransformDirection(rigidBody.velocity).z >= 0 ? 1 : -1; //Ternary operator to get direction of movement (backwards or forwards)
-
+            speed = rigidBody.velocity.magnitude; //speed to be called from speedometer manager
             //X axis controls rotation, therefore y and z will be blank
             mesh.transform.Rotate(magnitude * direction / circumference, 0f, 0f); 
         }
