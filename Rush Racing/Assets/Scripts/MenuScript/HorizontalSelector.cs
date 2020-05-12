@@ -76,4 +76,3 @@ public class HorizontalSelector : MonoBehaviour
         text.text = ObjectList[index].MapListName;
     }
 }
-
