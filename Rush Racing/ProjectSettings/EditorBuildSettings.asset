@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu/ProfileCreation.unity
-    guid: 9bc48ada0d0d7cf42ae02da0293ef274
-  - enabled: 1
     path: Assets/Scenes/Menu/MainMenu.unity
     guid: 4e8f1d88bf18a8e4eb8dbc79b4c1fb5a
   - enabled: 1
@@ -20,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu/Garage.unity
     guid: 92f6380300c089e45a9501348064f299
+  - enabled: 1
+    path: Assets/Scenes/Tracks/TestScene.unity
+    guid: 24914f6c83d9ffe49900dd20e1b02422
+  - enabled: 1
+    path: Assets/Scenes/Menu/ProfileCreation.unity
+    guid: 9bc48ada0d0d7cf42ae02da0293ef274
   m_configObjects: {}
