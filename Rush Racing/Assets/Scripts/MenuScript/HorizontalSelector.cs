@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.iOS;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -76,3 +75,4 @@ public class HorizontalSelector : MonoBehaviour
         text.text = ObjectList[index].MapListName;
     }
 }
+
