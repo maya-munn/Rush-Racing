@@ -36,4 +36,9 @@ public class MenuController : MonoBehaviour
     {
         SceneManager.LoadScene(4);
     }
+
+    public void CreateProfileMenu()
+    {
+        SceneManager.LoadScene(5);
+    }
 }
