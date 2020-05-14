@@ -25,11 +25,6 @@ public class MenuChange : MonoBehaviour
         SceneManager.LoadScene((int)Scene.Garage);
     }
 
-    public void PlayMenu()
-    {
-        SceneManager.LoadScene((int)Scene.PlayMenu);
-    }
-
     public void FreePlayMenu()
     {
         SceneManager.LoadScene((int)Scene.FreePlay);
@@ -42,11 +37,11 @@ public class MenuChange : MonoBehaviour
 
     private enum Scene
     {
-        ProfileCreation = 0,
-        MainMenu = 1,
-        Garage = 2,
-        PlayMenu = 3,
-        FreePlay = 4,
-        Tournament = 5
+        MainMenu = 0,
+        FreePlay = 1,
+        Tournament = 2,
+        Garage = 3,
+        RaceScene = 4,
+        ProfileCreation = 5
     }
 }
