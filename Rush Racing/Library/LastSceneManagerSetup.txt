@@ -1,0 +1,9 @@
+sceneSetups:
+<<<<<<< HEAD
+- path: Assets/Scenes/Tracks/TestSceneLambo.unity
+=======
+- path: Assets/Scenes/Tracks/TestScene.unity
+>>>>>>> master
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
