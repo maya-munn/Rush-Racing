@@ -25,11 +25,6 @@ public class MenuChange : MonoBehaviour
         SceneManager.LoadScene((int)Scene.Garage);
     }
 
-    public void PlayMenu()
-    {
-        SceneManager.LoadScene((int)Scene.PlayMenu);
-    }
-
     public void FreePlayMenu()
     {
         SceneManager.LoadScene((int)Scene.FreePlay);
