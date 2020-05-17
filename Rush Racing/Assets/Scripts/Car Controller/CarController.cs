@@ -28,20 +28,14 @@ public class CarController : MonoBehaviour
     public float strengthCoefficient = 20000f;  //Torque
     public float brakeStrength;                 //Strength of braking (brake torque)
     public float maxTurn = 20f;                 //Degrees
-<<<<<<< HEAD
     public float speed;
-=======
->>>>>>> master
 
     public Transform centreOfMass;              //Centre of mass
     public Rigidbody rigidBody;
 
-<<<<<<< HEAD
-=======
     public Material brakePressedMat;
     public Material normalRearLightMat;
 
->>>>>>> master
     private void Start()
     {
         //Input manager reference to translate into car manipulation
@@ -66,15 +60,11 @@ public class CarController : MonoBehaviour
 
         foreach (GameObject tailLight in tailLights)
         {
-<<<<<<< HEAD
-            tailLight.GetComponent<Renderer>().material.SetColor("_EmissionColor", im.brake ? new Color(0.5f, 0.111f, 0.111f) : new Color(0f, 0f, 0f));
-=======
             //For normal cars, changing the colour will work
             //tailLight.GetComponent<Renderer>().material.SetColor("_EmissionColor", im.brake ? new Color(0.5f, 0.111f, 0.111f) : new Color(0f, 0f, 0f));
 
             //Lamborghini Huracan, need to change the material color directly
             tailLight.GetComponent<MeshRenderer>().material = (im.brake ? brakePressedMat : normalRearLightMat);
->>>>>>> master
         }
     }
 
@@ -95,23 +85,12 @@ public class CarController : MonoBehaviour
                 //If not braking, move the car
                 wheel.motorTorque = strengthCoefficient * Time.deltaTime * im.throttle;
                 wheel.brakeTorque = 0f; //If driving, do not set any brake
-<<<<<<< HEAD
-                
-
-=======
->>>>>>> master
             }
         }
 
         //Physics for horizontal car movement
         foreach (GameObject wheel in steeringWheels)
         {
-<<<<<<< HEAD
-            //Get the angle of turn when the wheels are steered another direction than straight
-            wheel.GetComponent<WheelCollider>().steerAngle = maxTurn * im.steer;               
-            //Changes the Y-axis of wheels to simulate the wheel steering in the specified direction
-            wheel.transform.localEulerAngles = new Vector3(0f, im.steer * maxTurn, 0f);
-=======
             ////Get the angle of turn when the wheels are steered another direction than straight
             //wheel.GetComponent<WheelCollider>().steerAngle = maxTurn * im.steer;               
             ////Changes the Y-axis of wheels to simulate the wheel steering in the specified direction
@@ -124,21 +103,11 @@ public class CarController : MonoBehaviour
 
             //Changes the Y-axis of wheels to simulate the wheel steering in the specified direction
             wheel.transform.localEulerAngles = new Vector3(-90f, im.steer * maxTurn, 90f);
->>>>>>> master
         }
 
         //For each of our meshes, we need to change the rotate to simulate wheel spinning
         foreach (GameObject mesh in meshes)
         {
-<<<<<<< HEAD
-            //Math for wheel rotation accordingly to speed
-            float magnitude = rigidBody.velocity.magnitude; //metres per second
-            float circumference = 2 * Mathf.PI * 0.33f; //circumference of any wheel. 0.33 is default radius for wheel
-            float direction = transform.InverseTransformDirection(rigidBody.velocity).z >= 0 ? 1 : -1; //Ternary operator to get direction of movement (backwards or forwards)
-            speed = rigidBody.velocity.magnitude; //speed to be called from speedometer manager
-            //X axis controls rotation, therefore y and z will be blank
-            mesh.transform.Rotate(magnitude * direction / circumference, 0f, 0f); 
-=======
             ////Math for wheel rotation accordingly to speed
             //float magnitude = rigidBody.velocity.magnitude; //metres per second
             //float circumference = 2 * Mathf.PI * 0.33f; //circumference of any wheel. 0.33 is default radius for wheel
@@ -153,10 +122,10 @@ public class CarController : MonoBehaviour
             float magnitude = rigidBody.velocity.magnitude; //metres per second
             float circumference = 2 * Mathf.PI * 0.33f; //circumference of any wheel. 0.33 is default radius for wheel
             float direction = transform.InverseTransformDirection(rigidBody.velocity).z >= 0 ? -1 : 1; //Ternary operator to get direction of movement (backwards or forwards)
+            speed = rigidBody.velocity.magnitude; //speed to be called from speedometer manager
 
             //Y axis controls rotation
             mesh.transform.Rotate(0f, magnitude * direction / circumference, 0f);
->>>>>>> master
         }
     }
 }
