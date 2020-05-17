@@ -91,6 +91,10 @@ public class CarController : MonoBehaviour
         //Physics for horizontal car movement
         foreach (GameObject wheel in steeringWheels)
         {
+            //Get the angle of turn when the wheels are steered another direction than straight
+            wheel.GetComponent<WheelCollider>().steerAngle = maxTurn * im.steer;               
+            //Changes the Y-axis of wheels to simulate the wheel steering in the specified direction
+            wheel.transform.localEulerAngles = new Vector3(0f, im.steer * maxTurn, 0f);
             ////Get the angle of turn when the wheels are steered another direction than straight
             //wheel.GetComponent<WheelCollider>().steerAngle = maxTurn * im.steer;               
             ////Changes the Y-axis of wheels to simulate the wheel steering in the specified direction
@@ -112,8 +116,8 @@ public class CarController : MonoBehaviour
             //float magnitude = rigidBody.velocity.magnitude; //metres per second
             //float circumference = 2 * Mathf.PI * 0.33f; //circumference of any wheel. 0.33 is default radius for wheel
             //float direction = transform.InverseTransformDirection(rigidBody.velocity).z >= 0 ? 1 : -1; //Ternary operator to get direction of movement (backwards or forwards)
-
-            //X axis controls rotation, therefore y and z will be blank
+            //speed = rigidBody.velocity.magnitude; //speed to be called from speedometer manager
+            ////X axis controls rotation, therefore y and z will be blank
             //mesh.transform.Rotate(magnitude * direction / circumference, 0f, 0f);
 
             //Custom rotation control for lamborghini huracan
