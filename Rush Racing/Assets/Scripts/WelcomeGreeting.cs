@@ -9,11 +9,46 @@ using UnityEngine.UI;
 /// </summary>
 public class WelcomeGreeting : MonoBehaviour
 {
+    //Text UI object to modify
     public GameObject usernameText;
+    //Reference to user database table
+    private UserTable userTable;
+    //String to store retrieved username
+    string username;
+
     // Start is called before the first frame update
     void Start()
     {
-        string username = PlayerPrefs.GetString("SessionUsername");
-        usernameText.GetComponent<TextMeshProUGUI>().text = "Hello, " + username + "!";
+        bool userExists = checkUserProfileExists();
+        if (userExists)
+        {
+            //Get username 
+            username = userTable.GetFirstUsername();
+        }
+
+        //Check if null
+        if (username == null || username.Equals(""))
+        {
+            //Make invisible
+            usernameText.SetActive(false);
+        }
+        else
+        {
+            //Make visible
+            usernameText.SetActive(true);
+            //Set the greeting text with username
+            usernameText.GetComponent<TextMeshProUGUI>().text = "Hello, " + username + "!";
+        }
+
+    }
+
+    private bool checkUserProfileExists()
+    {
+        //Create new instance of UserTable for DB access
+        userTable = gameObject.AddComponent<UserTable>();
+        bool existingUser = userTable.CheckForExistingUsers();
+
+        //Return true if user exists
+        return existingUser;
     }
 }

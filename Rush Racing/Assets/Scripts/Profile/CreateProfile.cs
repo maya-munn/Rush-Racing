@@ -23,7 +23,7 @@ public class CreateProfile : MonoBehaviour
     public GameObject feedbackText;
     public GameObject createProfileButton;
 
-    int mainMenuSceneIndex = 1; //Index of main menu scene
+    int mainMenuSceneIndex = 0; //Index of main menu scene
 
     //Connection to user table of DB
     UserTable userTable;
@@ -35,21 +35,11 @@ public class CreateProfile : MonoBehaviour
     {
         //Create a DB connection through UserTable script
         userTable = gameObject.AddComponent<UserTable>();
-
-        //Check if user DB contains a user
-        bool dbContainsUser = userTable.CheckForExistingUsers();
-        if (dbContainsUser)
-        {
-            //Close db connection
-            SceneManager.LoadScene(mainMenuSceneIndex);
-            //userTable.closeConn();  ////////////////////////////////////////////
-        }
-        //Else stay on this scene to create a profile
     }
 
     private void Update()
     {
-        /* Make create profile button available only if:
+        /* Make create profile button active only if:
          *   Username text box has 1 char
          *   Pin text box has 4 char
          */
@@ -76,18 +66,26 @@ public class CreateProfile : MonoBehaviour
             //Create new DB entry and move onto main menu
             string username = usernameTextBox.GetComponent<Text>().text;
             int pin = createPinHash(pinString);
-            userTable.CreateNewUser(username, pin);
 
-            //Store into current game session
-            PlayerPrefs.SetString("SessionUsername", username);
+            //Check if theres an existing user
+            bool existing = userTable.CheckForExistingUsers();
+            if (existing)
+            {
+                //If theres a user already, override its userID
+                //at userID 1 as that is default
+                userTable.CreateOverrideUser(username, pin, 1);
+            }
+            else
+            {
+                //Create user normally
+                userTable.CreateNewUser(username, pin);
+            }
 
             //Query for ID based on username (both unique)
             int userID = userTable.GetIDFromUsername(username);
             PlayerPrefs.SetInt("SessionUserID", userID);
 
             SceneManager.LoadScene(mainMenuSceneIndex);
-            //Close db connection
-           // userTable.closeConn();        ///////////////////////////////
         }
         else
         {
