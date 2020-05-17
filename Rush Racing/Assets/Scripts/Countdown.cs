@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 //Author: Immanuel Siregar
 //This code was heavily inspired by the code from Jimmy Vegas' Unity Racing Game tutorial. Assets 'GetReady' and 'GoAudio' were used from his website, as placeholders right now. As development continues, we would likely use or create our own assets.
-
+//Update (Bernadette Cruz): added disable car controls during countdown, which is enabled after countdown finishes.
 public class Countdown : MonoBehaviour
 {
     //Connects to the GameObjects and audio files in the coundown animation
@@ -13,10 +13,11 @@ public class Countdown : MonoBehaviour
     public AudioSource GetReady;
     public AudioSource GoAudio;
     public GameObject LapTimer;
+    public GameObject CarController;
 
     //On start, calls the animation
     void Start()
-    {
+    {        
         StartCoroutine(CountStart());
     }
 
@@ -25,6 +26,7 @@ public class Countdown : MonoBehaviour
     IEnumerator CountStart()
     {
         yield return new WaitForSeconds(0.5f);
+        
 
         CountDown.GetComponent<Text>().text = "3";
         GetReady.Play();
@@ -45,6 +47,7 @@ public class Countdown : MonoBehaviour
         CountDown.GetComponent<Text>().text = "GO!";
         GoAudio.Play();
         LapTimer.SetActive(true);
+        CarController.SetActive(true);
         
     }
 
