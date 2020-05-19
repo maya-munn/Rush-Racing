@@ -11,6 +11,10 @@ using UnityEngine.SceneManagement;
 public class MenuChange : MonoBehaviour
 {   //add default screen to start in later
 
+    public void CreateProfileMenu()
+    {
+        SceneManager.LoadScene((int)Scene.ProfileCreation);
+    }
     public void MainMenu()
     {
         SceneManager.LoadScene((int)Scene.MainMenu);
@@ -38,7 +42,6 @@ public class MenuChange : MonoBehaviour
         Tournament = 2,
         Garage = 3,
         RaceScene = 4,
-        ProfileCreation = 5,
-        ProfileList = 6
+        ProfileCreation = 5
     }
 }

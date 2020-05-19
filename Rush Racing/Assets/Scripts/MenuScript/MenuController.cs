@@ -19,8 +19,7 @@ public class MenuController : MonoBehaviour
         Tournament = 2,
         Garage = 3,
         RaceScene = 4,
-        ProfileCreation = 5,
-        ProfileList = 6
+        ProfileCreation = 5
     }
 
     //**************************//
@@ -44,10 +43,6 @@ public class MenuController : MonoBehaviour
     public void GarageScene()
     {
         SceneManager.LoadScene((int)SceneIndex.Garage);
-    }
-
-    public void ProfileList(){
-        SceneManager.LoadScene((int)SceneIndex.ProfileList);
     }
 
     public void QuitButton()
