@@ -23,7 +23,9 @@ public class LapComplete : MonoBehaviour
 
     void Update()
     {
-      
+      if (LapsDone == 4){
+          RaceFinish.SetActive(true);
+      }
     }
 
     void OnTriggerEnter()
