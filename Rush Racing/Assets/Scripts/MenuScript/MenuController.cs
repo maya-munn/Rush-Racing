@@ -19,7 +19,8 @@ public class MenuController : MonoBehaviour
         Tournament = 2,
         Garage = 3,
         RaceScene = 4,
-        ProfileCreation = 5
+        ProfileCreation = 5,
+        ProfileList = 6
     }
 
     //**************************//
@@ -34,6 +35,10 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene((int)SceneIndex.FreePlay);
     }
 
+    public void ProfileList(){
+        SceneManager.LoadScene((int)SceneIndex.ProfileList);
+    }
+    
     public void TournamentMode()
     {
         SceneManager.LoadScene((int)SceneIndex.Tournament);

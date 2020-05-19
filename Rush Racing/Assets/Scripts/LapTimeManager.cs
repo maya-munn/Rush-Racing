@@ -15,6 +15,7 @@ public class LapTimeManager : MonoBehaviour
 	public GameObject SecondBox;
 	public GameObject MilliBox;
 
+
 	public static float RawTime;
 
 	void Update()

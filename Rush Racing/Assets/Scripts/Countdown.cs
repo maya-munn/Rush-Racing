@@ -13,6 +13,7 @@ public class Countdown : MonoBehaviour
     public AudioSource GetReady;
     public AudioSource GoAudio;
     public GameObject LapTimer;
+    public GameObject TotalLapTimer;
     public GameObject CarController;
 
     //On start, calls the animation
@@ -47,6 +48,7 @@ public class Countdown : MonoBehaviour
         CountDown.GetComponent<Text>().text = "GO!";
         GoAudio.Play();
         LapTimer.SetActive(true);
+        TotalLapTimer.SetActive(true);
         CarController.SetActive(true);
         
     }
