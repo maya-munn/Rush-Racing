@@ -54,7 +54,11 @@ public class CreateProfile : MonoBehaviour
 
     //************************************//
 
-    public void createProfile()
+    /// <summary>
+    /// Creates a new profile at a certain index
+    /// </summary>
+    /// <param name="indexAt">Index either 1, 2 or 3 of save slots</param>
+    public void createProfile(int indexAt)
     {
         //check if pin number is 4 integer numbers
         string pinString = pinNumTextBox.GetComponent<Text>().text;
@@ -72,18 +76,13 @@ public class CreateProfile : MonoBehaviour
             if (existing)
             {
                 //If theres a user already, override its userID
-                //at userID 1 as that is default
-                userTable.CreateOverrideUser(username, pin, 1);
+                userTable.CreateOverrideUser(username, pin, indexAt);
             }
             else
             {
                 //Create user normally
-                userTable.CreateNewUser(username, pin);
+                userTable.CreateNewUser(username, pin, indexAt);
             }
-
-            //Query for ID based on username (both unique)
-            int userID = userTable.GetIDFromUsername(username);
-            PlayerPrefs.SetInt("SessionUserID", userID);
 
             SceneManager.LoadScene(mainMenuSceneIndex);
         }

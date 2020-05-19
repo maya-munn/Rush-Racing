@@ -23,7 +23,7 @@ public class WelcomeGreeting : MonoBehaviour
         if (userExists)
         {
             //Get username 
-            username = userTable.GetFirstUsername();
+            username = userTable.GetCurrentUsername();
         }
 
         //Check if null

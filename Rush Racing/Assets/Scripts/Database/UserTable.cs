@@ -1,6 +1,5 @@
 ﻿using Mono.Data.Sqlite;
 using System;
-using System.Data;
 using UnityEngine;
 
 /// <summary>
@@ -28,7 +27,7 @@ public class UserTable : DBSuperClass
 	/// 
 	/// </summary>
 	/// <returns>bool to see if there is any thing in table</returns>
-	public bool ReadUserTable()
+	public bool isTablePopulated()
     {
 		using (dbcon)
 		{
@@ -46,6 +45,43 @@ public class UserTable : DBSuperClass
 		}
 	}
 
+	public bool[] existingProfileIndices()
+	{
+		bool[] profilesExisting = new bool[3] { false, false, false } ; //Max 3 profiles
+
+		using (dbcon)
+		{
+			openConnection();
+
+			// Read all values from table
+			string query = "SELECT * FROM user";
+			cmnd = new SqliteCommand(query, dbcon);
+
+			//Reader object
+			SqliteDataReader reader = cmnd.ExecuteReader();
+			while (reader.Read())
+			{
+				//Change bool array values if userID exists
+				int ID = reader.GetInt32(0); //userID is first value
+				switch (ID)
+				{
+					case 1:
+						profilesExisting[0] = true;
+						break;
+					case 2:
+						profilesExisting[1] = true;
+						break;
+					case 3:
+						profilesExisting[2] = true; 
+						break;
+				}
+			}
+
+			dbcon.Close();
+			return profilesExisting;
+		}
+	}
+
 	public bool CheckForExistingUsers()
 	{
 		using (dbcon)
@@ -54,22 +90,28 @@ public class UserTable : DBSuperClass
 
 			//Read user table 
 			//Check if rows exist
-			bool exists = ReadUserTable();
+			bool exists = isTablePopulated();
 
 			dbcon.Close();
 			return exists;
 		}
 	}
 
-	public void CreateNewUser(string username, long pinHash)
+	public void CreateNewUser(string username, long pinHash, int userID)
 	{
 		using (dbcon)
 		{
 			openConnection();
 
-			string insert = "INSERT INTO user(username, userPin) VALUES('" + username + "', '" + pinHash + "')";
+			//Create new user in user table
+			string insert = "INSERT INTO user(username, userPin, userID) VALUES('" + username + "', '" + pinHash + "', '" + userID + "')";
 			cmnd = new SqliteCommand(insert, dbcon);
 			cmnd.ExecuteNonQuery();
+
+			//Set new user currency to 0
+			gameObject.AddComponent<CurrencyTable>().SetNewUserCurrency(userID);
+
+			PlayerPrefs.SetInt("CurrentUserID", userID);
 
 			dbcon.Close();
 		}
@@ -78,9 +120,6 @@ public class UserTable : DBSuperClass
 	/// <summary>
 	/// creates new user at specific ID
 	/// </summary>
-	/// <param name="username"></param>
-	/// <param name="pinHash"></param>
-	/// <param name="userID"></param>
 	public void CreateOverrideUser(string username, long pinHash, int userID)
 	{
 		using (dbcon)
@@ -96,6 +135,11 @@ public class UserTable : DBSuperClass
 			string insert = "INSERT INTO user(username, userPin, userID) VALUES('" + username + "', " + pinHash + ", " + userID + ")";
 			cmnd = new SqliteCommand(insert, dbcon);
 			cmnd.ExecuteNonQuery();
+
+			//Set new user currency to 0
+			gameObject.AddComponent<CurrencyTable>().SetNewUserCurrency(userID);
+
+			PlayerPrefs.SetInt("CurrentUserID", userID);
 
 			dbcon.Close();
 		}
@@ -118,7 +162,7 @@ public class UserTable : DBSuperClass
 		}
 	}
 
-	public string GetFirstUsername()
+	public string GetCurrentUsername()
 	{
 		using(dbcon)
 		{
@@ -129,7 +173,7 @@ public class UserTable : DBSuperClass
 				openConnection();
 
 				//Get the user name
-				string query = "SELECT username FROM user WHERE userID = 1";
+				string query = "SELECT username FROM user WHERE userID = " + PlayerPrefs.GetInt("CurrentUserID");
 				cmnd = new SqliteCommand(query, dbcon);
 				object result = cmnd.ExecuteScalar();
 				//Turn result into a string
