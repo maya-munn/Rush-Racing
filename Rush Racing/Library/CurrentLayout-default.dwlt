@@ -45,10 +45,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 679, y: 492}
+  m_MinSize: {x: 579, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 115
+  controlID: 88
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -70,9 +70,9 @@ MonoBehaviour:
     height: 947
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 15}
+  m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 15}
+  - {fileID: 16}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &4
@@ -96,9 +96,9 @@ MonoBehaviour:
     height: 573
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 16}
+  m_ActualView: {fileID: 17}
   m_Panes:
-  - {fileID: 16}
+  - {fileID: 17}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &5
@@ -122,11 +122,11 @@ MonoBehaviour:
     height: 374
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 14}
+  m_ActualView: {fileID: 15}
   m_Panes:
-  - {fileID: 14}
-  - {fileID: 19}
-  - {fileID: 12}
+  - {fileID: 15}
+  - {fileID: 20}
+  - {fileID: 13}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &6
@@ -217,10 +217,10 @@ MonoBehaviour:
     y: 0
     width: 1531
     height: 947
-  m_MinSize: {x: 403, y: 492}
+  m_MinSize: {x: 303, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 116
+  controlID: 89
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -242,10 +242,10 @@ MonoBehaviour:
     y: 0
     width: 1531
     height: 573
-  m_MinSize: {x: 403, y: 221}
+  m_MinSize: {x: 303, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 117
+  controlID: 69
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: TestRunnerWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -265,16 +265,248 @@ MonoBehaviour:
     y: 0
     width: 1152
     height: 573
-  m_MinSize: {x: 202, y: 221}
+  m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 17}
+  m_ActualView: {fileID: 12}
   m_Panes:
-  - {fileID: 17}
   - {fileID: 18}
-  - {fileID: 13}
-  m_Selected: 0
-  m_LastSelected: 1
+  - {fileID: 12}
+  - {fileID: 19}
+  - {fileID: 14}
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 379
+    y: 73
+    width: 1150
+    height: 552
+  m_ViewDataDictionary: {fileID: 0}
+  m_Spl:
+    ID: 135
+    splitterInitialOffset: 433
+    currentActiveSplitter: -1
+    realSizes: 6a01000078000000
+    relativeSizes:
+    - 0.75103736
+    - 0.24896264
+    minSizes: 2000000020000000
+    maxSizes: 0000000000000000
+    lastTotalSize: 482
+    splitSize: 6
+    xOffset: 0
+  m_TestTypeToolbarIndex: 1
+  m_PlayModeTestListGUI:
+    m_Window: {fileID: 12}
+    newResultList:
+    - id: 1000
+      uniqueId: '[Rush Racing][suite]'
+      name: Rush Racing
+      fullName: Rush Racing
+      resultStatus: 1
+      duration: 0.0049811
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    m_ResultText: 
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 5aa488c4d6aa39278359db417dc7445effffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+  m_EditModeTestListGUI:
+    m_Window: {fileID: 12}
+    newResultList:
+    - id: 1000
+      uniqueId: '[Rush Racing][suite]'
+      name: Rush Racing
+      fullName: Rush Racing
+      resultStatus: 2
+      duration: 0.2467493
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1004
+      uniqueId: '[C:/Users/bernie/Documents/GitHub/Rush-Racing/Rush Racing/Library/ScriptAssemblies/Tests.dll][suite]'
+      name: Tests.dll
+      fullName: C:/Users/bernie/Documents/GitHub/Rush-Racing/Rush Racing/Library/ScriptAssemblies/Tests.dll
+      resultStatus: 2
+      duration: 0.1933703
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[Rush Racing][suite]'
+    - id: 1005
+      uniqueId: Tests.dll/[Tests][suite]
+      name: Tests
+      fullName: Tests
+      resultStatus: 2
+      duration: 0.1896972
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1004
+      parentUniqueId: '[C:/Users/bernie/Documents/GitHub/Rush-Racing/Rush Racing/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1001
+      uniqueId: Tests.dll/Tests/[Tests][Tests.NewTestScript][suite]
+      name: NewTestScript
+      fullName: Tests.NewTestScript
+      resultStatus: 2
+      duration: 0.1851726
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1005
+      parentUniqueId: Tests.dll/[Tests][suite]
+    - id: 1002
+      uniqueId: Tests.dll/Tests/NewTestScript/[Tests][Tests.NewTestScript.NewTestScriptSimplePasses]
+      name: NewTestScriptSimplePasses
+      fullName: Tests.NewTestScript.NewTestScriptSimplePasses
+      resultStatus: 2
+      duration: 0.1523432
+      messages: "  Expected: 7\r\n  But was:  5\r\n"
+      output: 
+      stacktrace: 'at Tests.NewTestScript.NewTestScriptSimplePasses () [0x00003]
+        in C:\Users\bernie\Documents\GitHub\Rush-Racing\Rush Racing\Assets\Tests\TestSuite.cs:16
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/Tests/[Tests][Tests.NewTestScript][suite]
+    - id: 1003
+      uniqueId: Tests.dll/Tests/NewTestScript/[Tests][Tests.NewTestScript.NewTestScriptWithEnumeratorPasses]
+      name: NewTestScriptWithEnumeratorPasses
+      fullName: Tests.NewTestScript.NewTestScriptWithEnumeratorPasses
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/Tests/[Tests][Tests.NewTestScript][suite]
+    m_ResultText: "NewTestScriptSimplePasses (0.152s)\n---\nExpected: 7\r\n  But
+      was:  5\n---\nat Tests.NewTestScript.NewTestScriptSimplePasses () [0x00003]
+      in C:\\Users\\bernie\\Documents\\GitHub\\Rush-Racing\\Rush Racing\\Assets\\Tests\\TestSuite.cs:16"
+    m_ResultStacktrace: 'at Tests.NewTestScript.NewTestScriptSimplePasses () [0x00003]
+      in C:\Users\bernie\Documents\GitHub\Rush-Racing\Rush Racing\Assets\Tests\TestSuite.cs:16
+
+'
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: a19b7da4
+      m_LastClickedID: -1535272031
+      m_ExpandedIDs: bd37fa9584ec67c25aa488c4d6aa39278359db4189b09a577dc7445effffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -392,7 +624,7 @@ MonoBehaviour:
   m_ShowReferencedBuses: 1
   m_ShowBusConnections: 0
   m_ShowBusConnectionsOfSelection: 0
---- !u!114 &13
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -413,12 +645,12 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 468
-    y: 181
-    width: 973
-    height: 501
+    x: 379
+    y: 73
+    width: 1150
+    height: 552
   m_ViewDataDictionary: {fileID: 0}
---- !u!114 &14
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -457,20 +689,20 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Car Controller
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Car Controller
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\bernie\Documents\GitHub\Rush-Racing\Rush Racing
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 31}
-    m_SelectedIDs: e8380000
-    m_LastClickedID: 14568
-    m_ExpandedIDs: 000000006438000066380000683800006a3800006c3800006e3800007038000072380000e6380000
+    scrollPos: {x: 0, y: 7}
+    m_SelectedIDs: 72350000
+    m_LastClickedID: 13682
+    m_ExpandedIDs: 00000000723500007435000076350000783500007a3500007c3500007e350000803500008235000084350000863500008835000080390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -498,7 +730,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006438000066380000683800006a3800006c3800006e3800007038000072380000
+    m_ExpandedIDs: 00000000723500007435000076350000783500007a3500007c3500007e3500008035000082350000843500008635000088350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -542,7 +774,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 5}
+      m_ClientGUIView: {fileID: 8}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -554,7 +786,7 @@ MonoBehaviour:
     m_GridSize: 64
   m_SkipHiddenPackages: 1
   m_DirectoriesAreaWidth: 210
---- !u!114 &15
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -592,7 +824,7 @@ MonoBehaviour:
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
---- !u!114 &16
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -621,9 +853,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d02d0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 52fbffff5a360000
+      m_ExpandedIDs: 10f7ffff92f7ffff52fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -647,7 +879,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: fd23c5ff7822f1d45963eab9d240136e
---- !u!114 &17
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -683,9 +915,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 16.77375, y: -0.48275983, z: -54.90409}
+    m_Target: {x: 415.2648, y: 167.78017, z: 756.40265}
     speed: 2
-    m_Value: {x: 16.77375, y: -0.48275983, z: -54.90409}
+    m_Value: {x: 415.2648, y: 167.78017, z: 756.40265}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -731,13 +963,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.17520317, y: -0.6166365, z: 0.14328231, w: 0.75401247}
+    m_Target: {x: 0.07371592, y: -0.026927713, z: 0.0019909702, w: 0.9969146}
     speed: 2
-    m_Value: {x: 0.17520307, y: -0.61663616, z: 0.14328222, w: 0.754012}
+    m_Value: {x: 0.07371585, y: -0.026927687, z: 0.0019909684, w: 0.9969137}
   m_Size:
-    m_Target: 1.54466
+    m_Target: 752.20984
     speed: 2
-    m_Value: 1.54466
+    m_Value: 752.20984
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -762,7 +994,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &18
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -823,7 +1055,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -854,7 +1086,7 @@ MonoBehaviour:
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &19
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}

@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/*  Script by: Bernadette Cruz 
-*   This script allows the camera to follow the car's minimap tracker
-    andstabilises the camera to prevent it from flipping over
-*/
+/*  <summary>
+ *   Allows the camera to follow the car's minimap tracker and stabilises the camera to prevent it from flipping over
+ *   Author: Bernadette Cruz    
+ */
 public class Minimap : MonoBehaviour
 {   public GameObject Target;
     public float y;
