@@ -12,6 +12,8 @@ namespace Tests
         [Test]
         public void NewTestScriptSimplePasses()
         {
+            int count = 5;
+            Assert.AreEqual(7, count);
             // Use the Assert class to test conditions
         }
 
