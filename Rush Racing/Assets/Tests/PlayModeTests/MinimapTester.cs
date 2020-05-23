@@ -10,7 +10,7 @@ using UnityEngine.Audio;
 using UnityEngine.TestTools;
 using UnityEngine.UI;
 /*  <summary>
-A testing script with unit tests to check if volume feature is working properly.
+A testing script with unit tests to check if minimap feature is working properly.
 Author: Bernadette Cruz
 */
 namespace Tests
