@@ -2,6 +2,7 @@
 Rush Racing - an Android and PC racing game. Developed by The Fast and The Curious team for COMP602/11 Semester 1 2020 assignment. 
 
 [Project Website: RushRacing.fun](https://www.rushracing.fun)
+
 [Click here to play Rush Racing now!](https://www.rushracing.fun/playgame) [https://www.rushracing.fun/playgame](https://www.rushracing.fun/playgame)
 
 ## Overview:
