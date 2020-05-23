@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
 --- !u!114 &2
@@ -45,10 +45,10 @@ MonoBehaviour:
     y: 30
     width: 1904
     height: 931
-  m_MinSize: {x: 577, y: 471}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 579, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 111
+  controlID: 108
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 346
     height: 931
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 385
     height: 648
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -151,7 +151,7 @@ MonoBehaviour:
     y: 0
     width: 1904
     height: 981
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -217,10 +217,10 @@ MonoBehaviour:
     y: 0
     width: 1558
     height: 931
-  m_MinSize: {x: 302, y: 471}
+  m_MinSize: {x: 303, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 112
+  controlID: 113
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -242,10 +242,10 @@ MonoBehaviour:
     y: 0
     width: 1558
     height: 648
-  m_MinSize: {x: 302, y: 200}
-  m_MaxSize: {x: 8002, y: 4021}
+  m_MinSize: {x: 303, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 113
+  controlID: 114
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -301,7 +301,7 @@ MonoBehaviour:
     height: 627
   m_ViewDataDictionary: {fileID: 0}
   m_Spl:
-    ID: 140
+    ID: 141
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes: a20100008b000000
@@ -322,7 +322,7 @@ MonoBehaviour:
       name: Rush Racing
       fullName: Rush Racing
       resultStatus: 1
-      duration: 0.3904661
+      duration: 5.180827
       messages: 
       output: 
       stacktrace: 
@@ -333,12 +333,12 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    - id: 1004
+    - id: 1003
       uniqueId: '[PlayModeTests.dll][suite]'
       name: PlayModeTests.dll
       fullName: C:/Users/bernie/Documents/GitHub/Rush-Racing/Rush Racing/Library/ScriptAssemblies/PlayModeTests.dll
       resultStatus: 1
-      duration: 0.210118
+      duration: 5.1305304
       messages: 
       output: 
       stacktrace: 
@@ -349,12 +349,12 @@ MonoBehaviour:
       categories: []
       parentId: 1000
       parentUniqueId: '[Rush Racing][suite]'
-    - id: 1005
+    - id: 1004
       uniqueId: PlayModeTests.dll/[PlayModeTests][Tests][suite]
       name: Tests
       fullName: Tests
       resultStatus: 1
-      duration: 0.1682018
+      duration: 5.104992
       messages: 
       output: 
       stacktrace: 
@@ -363,14 +363,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1004
+      parentId: 1003
       parentUniqueId: '[PlayModeTests.dll][suite]'
     - id: 1001
-      uniqueId: PlayModeTests.dll/Tests/[PlayModeTests][Tests.NewTestScript][suite]
-      name: NewTestScript
-      fullName: Tests.NewTestScript
+      uniqueId: PlayModeTests.dll/Tests/[PlayModeTests][Tests.MinimapTester][suite]
+      name: MinimapTester
+      fullName: Tests.MinimapTester
       resultStatus: 1
-      duration: 0.1591098
+      duration: 5.0928655
       messages: 
       output: 
       stacktrace: 
@@ -379,14 +379,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1005
+      parentId: 1006
       parentUniqueId: PlayModeTests.dll/[PlayModeTests][Tests][suite]
     - id: 1004
-      uniqueId: PlayModeTests.dll/Tests/NewTestScript/[PlayModeTests][Tests.NewTestScript.Camera_Following_Car]
+      uniqueId: PlayModeTests.dll/Tests/MinimapTester/[PlayModeTests][Tests.MinimapTester.Camera_Following_Car]
       name: Camera_Following_Car
-      fullName: Tests.NewTestScript.Camera_Following_Car
+      fullName: Tests.MinimapTester.Camera_Following_Car
       resultStatus: 1
-      duration: 0.1237913
+      duration: 5.0505257
       messages: 
       output: 
       stacktrace: 
@@ -397,13 +397,13 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1001
-      parentUniqueId: PlayModeTests.dll/Tests/[PlayModeTests][Tests.NewTestScript][suite]
+      parentUniqueId: PlayModeTests.dll/Tests/[PlayModeTests][Tests.MinimapTester][suite]
     - id: 1002
-      uniqueId: PlayModeTests.dll/Tests/NewTestScript/[PlayModeTests][Tests.NewTestScript.Check_CarTarget_Exists]
-      name: Check_CarTarget_Exists
-      fullName: Tests.NewTestScript.Check_CarTarget_Exists
+      uniqueId: PlayModeTests.dll/Tests/MinimapTester/[PlayModeTests][Tests.MinimapTester.Check_Car_Exists]
+      name: Check_Car_Exists
+      fullName: Tests.MinimapTester.Check_Car_Exists
       resultStatus: 1
-      duration: 0.0069076
+      duration: 0.0062226
       messages: 
       output: 
       stacktrace: 
@@ -414,13 +414,13 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1001
-      parentUniqueId: PlayModeTests.dll/Tests/[PlayModeTests][Tests.NewTestScript][suite]
+      parentUniqueId: PlayModeTests.dll/Tests/[PlayModeTests][Tests.MinimapTester][suite]
     - id: 1003
-      uniqueId: PlayModeTests.dll/Tests/NewTestScript/[PlayModeTests][Tests.NewTestScript.Check_MinimapCamera_Exists]
+      uniqueId: PlayModeTests.dll/Tests/MinimapTester/[PlayModeTests][Tests.MinimapTester.Check_MinimapCamera_Exists]
       name: Check_MinimapCamera_Exists
-      fullName: Tests.NewTestScript.Check_MinimapCamera_Exists
+      fullName: Tests.MinimapTester.Check_MinimapCamera_Exists
       resultStatus: 1
-      duration: 0.0006702
+      duration: 0.0005923
       messages: 
       output: 
       stacktrace: 
@@ -431,14 +431,14 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1001
-      parentUniqueId: PlayModeTests.dll/Tests/[PlayModeTests][Tests.NewTestScript][suite]
-    m_ResultText: Rush Racing (0.390s)
+      parentUniqueId: PlayModeTests.dll/Tests/[PlayModeTests][Tests.MinimapTester][suite]
+    m_ResultText: MinimapTester (5.093s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 5aa488c4
-      m_LastClickedID: -997677990
-      m_ExpandedIDs: fd868b86ae332b9144b3fb9c5aa488c49576efede557abf78359db41ffffff7f
+      m_SelectedIDs: 086aefba
+      m_LastClickedID: -1158714872
+      m_ExpandedIDs: fd868b86ae332b9144b3fb9c086aefba5aa488c49576efede557abf78359db41ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -483,88 +483,6 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    - id: 1007
-      uniqueId: '[Tests.dll][suite]'
-      name: Tests.dll
-      fullName: C:/Users/bernie/Documents/GitHub/Rush-Racing/Rush Racing/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1003
-      parentUniqueId: '[Rush Racing][suite]'
-    - id: 1008
-      uniqueId: Tests.dll/[Tests][suite]
-      name: Tests
-      fullName: Tests
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1007
-      parentUniqueId: '[Tests.dll][suite]'
-    - id: 1004
-      uniqueId: Tests.dll/Tests/[Tests][Tests.NewTestScript][suite]
-      name: NewTestScript
-      fullName: Tests.NewTestScript
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1008
-      parentUniqueId: Tests.dll/[Tests][suite]
-    - id: 1005
-      uniqueId: Tests.dll/Tests/NewTestScript/[Tests][Tests.NewTestScript.NewTestScriptSimplePasses]
-      name: NewTestScriptSimplePasses
-      fullName: Tests.NewTestScript.NewTestScriptSimplePasses
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/Tests/[Tests][Tests.NewTestScript][suite]
-    - id: 1006
-      uniqueId: Tests.dll/Tests/NewTestScript/[Tests][Tests.NewTestScript.NewTestScriptWithEnumeratorPasses]
-      name: NewTestScriptWithEnumeratorPasses
-      fullName: Tests.NewTestScript.NewTestScriptWithEnumeratorPasses
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/Tests/[Tests][Tests.NewTestScript][suite]
     m_ResultText: VolumeTester (0.096s)
     m_ResultStacktrace: 
     m_TestListState:
@@ -780,20 +698,20 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Tests/PlayModeTests
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Tests/PlayModeTests
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\bernie\Documents\GitHub\Rush-Racing\Rush Racing
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 31}
-    m_SelectedIDs: 38390000
-    m_LastClickedID: 14648
-    m_ExpandedIDs: 00000000383900003a3900003c3900003e39000040390000423900004439000046390000483900004a3900004c39000072390000
+    scrollPos: {x: 0, y: 110}
+    m_SelectedIDs: 6c390000
+    m_LastClickedID: 14700
+    m_ExpandedIDs: 000000003439000036390000383900003a3900003c3900003e390000403900004239000044390000463900004839000068390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -821,7 +739,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000383900003a3900003c3900003e39000040390000423900004439000046390000483900004a3900004c390000
+    m_ExpandedIDs: 000000003439000036390000383900003a3900003c3900003e3900004039000042390000443900004639000048390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -946,7 +864,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 9246ffffaa46ffff3a47ffffe649fffffe49ffffcc4affffca4cffffe64cffffb44dffffb44fffffd04fffff5650ffff5652ffff6e52fffff452fffff254ffff0a55ffff9055ffffda57fffff657ffff8658ffff845affffa05affff305bffff2e5dffff465dffffd65dffffd45fffffec5fffff7260ffff7262ffff8a62ffff5863ffffec65ffff0466ffff8a66ffff9a68ffffb268ffff3869ffff366bffff4e6bffffd46bffffd26dffffea6dffff706effffc270ffffda70ffff6a71ffff7273ffff8e73ffff1474ffff5e76ffff7a76ffff0a77ffff0a79ffff2679ffffac79ffffaa7bffffc27bffff527cffff567effff727effff027fffff0881ffff2481ffffaa81ffffaa83ffffc683ffff4c84ffff4a86ffff6686fffff686ffffa488ffffc088ffff4689ffff488bffff648bffffea8bffffe88dffff008effffd88effff8290ffff9a90ffff2091ffffd092ffffec92ffff7293ffff4096ffff5896ffffe896ffffec98ffff0899ffff9099ffff589bffff749bffff049cffff049effff1c9effffa29effffc6a0ffffdea0ffff6ea1fffff2a3ffff0ea4ffff94a4ffff92a6ffffaaa6ffff3aa7ffff48a9ffff60a9fffff0a9fffff0abffff0cacffff92acffffccaeffffe4aeffff74afffff1eb1ffff36b1ffffc6b1ffff5cb4ffff74b4fffffab4fffffab6ffff16b7ffffa6b7ffffaab9ffffc2b9ffff52baffff5ebcffff7abcffff00bdffff0cbfffff28bfffffaebfffff68c1ffff84c1ffff0ac2ffff16c4ffff2ec4ffffb4c4ffffc0c6ffffdcc6ffff62c7ffff62c9ffff7ec9ffff04caffffe2ccfffffeccffff84cdffff88cfffffa4cfffff2ad0ffff34d2ffff50d2ffff10d3ffffbed4ffffdad4ffff6ad5ffffccd7ffffe8d7ffff78d8ffff58dbffff74dbfffffadbfffff6deffff12dfffff98dfffffc4e1ffffe0e1ffff5ce2ffff32e4ffff4ee4ffffcae4ffffcae6ffffe6e6ffff6ce7ffff86e9ffffa2e9ffff20eaffff34ecffff4cecffff70ecffff26eeffff42eeffffc0eeffffc0f0ffffd8f0ffff56f1ffff66f3ffff82f3ffff00f4ffffc6f6ffffe2f6ffff5cf7ffff40fbffff
+      m_ExpandedIDs: 98f2ffffb0f2ffff66f3ffff94f5ffffb0f5ffff66f6ffff92f8ffffaef8ffff38f9ffff6afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
