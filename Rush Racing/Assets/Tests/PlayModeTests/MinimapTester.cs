@@ -10,7 +10,7 @@ using UnityEngine.Audio;
 using UnityEngine.TestTools;
 using UnityEngine.UI;
 /*  <summary>
-A testing script with unit tests to check if minimap feature is working properly.
+A testing script with unit tests to check if minimap feature - where the camera is following the car, is working as intended.
 Author: Bernadette Cruz
 */
 namespace Tests
