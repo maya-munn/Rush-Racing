@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 0
-    y: 43
-    width: 1920
-    height: 997
+    x: 8
+    y: 51
+    width: 1904
+    height: 981
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 1
+  m_Maximized: 0
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -43,12 +43,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1920
-    height: 947
-  m_MinSize: {x: 578, y: 342}
-  m_MaxSize: {x: 12003, y: 8042}
+    width: 1904
+    height: 931
+  m_MinSize: {x: 577, y: 471}
+  m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 42
+  controlID: 111
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -64,10 +64,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1536
+    x: 1558
     y: 0
-    width: 384
-    height: 947
+    width: 346
+    height: 931
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
@@ -92,10 +92,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 380
-    height: 619
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+    width: 385
+    height: 648
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -111,24 +111,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 619
-    width: 1536
-    height: 328
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 20}
+    y: 648
+    width: 1558
+    height: 283
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
   - {fileID: 20}
   - {fileID: 13}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -149,8 +149,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1920
-    height: 997
+    width: 1904
+    height: 981
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
@@ -170,7 +170,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1920
+    width: 1904
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -191,8 +191,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 977
-    width: 1920
+    y: 961
+    width: 1904
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -215,12 +215,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1536
-    height: 947
-  m_MinSize: {x: 303, y: 342}
-  m_MaxSize: {x: 8003, y: 8042}
+    width: 1558
+    height: 931
+  m_MinSize: {x: 302, y: 471}
+  m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 15
+  controlID: 112
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -240,12 +240,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1536
-    height: 619
-  m_MinSize: {x: 303, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+    width: 1558
+    height: 648
+  m_MinSize: {x: 302, y: 200}
+  m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 16
+  controlID: 113
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -261,10 +261,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 380
+    x: 385
     y: 0
-    width: 1156
-    height: 619
+    width: 1173
+    height: 648
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 12}
@@ -274,7 +274,7 @@ MonoBehaviour:
   - {fileID: 19}
   - {fileID: 14}
   m_Selected: 1
-  m_LastSelected: 0
+  m_LastSelected: 2
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -295,25 +295,25 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 380
-    y: 73
-    width: 1154
-    height: 598
+    x: 393
+    y: 81
+    width: 1171
+    height: 627
   m_ViewDataDictionary: {fileID: 0}
   m_Spl:
-    ID: 367
+    ID: 140
     splitterInitialOffset: 0
     currentActiveSplitter: -1
-    realSizes: 8c01000084000000
+    realSizes: a20100008b000000
     relativeSizes:
     - 0.75
     - 0.25
     minSizes: 2000000020000000
     maxSizes: 0000000000000000
-    lastTotalSize: 528
+    lastTotalSize: 557
     splitSize: 6
     xOffset: 0
-  m_TestTypeToolbarIndex: 1
+  m_TestTypeToolbarIndex: 0
   m_PlayModeTestListGUI:
     m_Window: {fileID: 12}
     newResultList:
@@ -321,8 +321,8 @@ MonoBehaviour:
       uniqueId: '[Rush Racing][suite]'
       name: Rush Racing
       fullName: Rush Racing
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.3904661
       messages: 
       output: 
       stacktrace: 
@@ -333,13 +333,112 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    m_ResultText: 
+    - id: 1004
+      uniqueId: '[PlayModeTests.dll][suite]'
+      name: PlayModeTests.dll
+      fullName: C:/Users/bernie/Documents/GitHub/Rush-Racing/Rush Racing/Library/ScriptAssemblies/PlayModeTests.dll
+      resultStatus: 1
+      duration: 0.210118
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[Rush Racing][suite]'
+    - id: 1005
+      uniqueId: PlayModeTests.dll/[PlayModeTests][Tests][suite]
+      name: Tests
+      fullName: Tests
+      resultStatus: 1
+      duration: 0.1682018
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1004
+      parentUniqueId: '[PlayModeTests.dll][suite]'
+    - id: 1001
+      uniqueId: PlayModeTests.dll/Tests/[PlayModeTests][Tests.NewTestScript][suite]
+      name: NewTestScript
+      fullName: Tests.NewTestScript
+      resultStatus: 1
+      duration: 0.1591098
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1005
+      parentUniqueId: PlayModeTests.dll/[PlayModeTests][Tests][suite]
+    - id: 1004
+      uniqueId: PlayModeTests.dll/Tests/NewTestScript/[PlayModeTests][Tests.NewTestScript.Camera_Following_Car]
+      name: Camera_Following_Car
+      fullName: Tests.NewTestScript.Camera_Following_Car
+      resultStatus: 1
+      duration: 0.1237913
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: PlayModeTests.dll/Tests/[PlayModeTests][Tests.NewTestScript][suite]
+    - id: 1002
+      uniqueId: PlayModeTests.dll/Tests/NewTestScript/[PlayModeTests][Tests.NewTestScript.Check_CarTarget_Exists]
+      name: Check_CarTarget_Exists
+      fullName: Tests.NewTestScript.Check_CarTarget_Exists
+      resultStatus: 1
+      duration: 0.0069076
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: PlayModeTests.dll/Tests/[PlayModeTests][Tests.NewTestScript][suite]
+    - id: 1003
+      uniqueId: PlayModeTests.dll/Tests/NewTestScript/[PlayModeTests][Tests.NewTestScript.Check_MinimapCamera_Exists]
+      name: Check_MinimapCamera_Exists
+      fullName: Tests.NewTestScript.Check_MinimapCamera_Exists
+      resultStatus: 1
+      duration: 0.0006702
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: PlayModeTests.dll/Tests/[PlayModeTests][Tests.NewTestScript][suite]
+    m_ResultText: Rush Racing (0.390s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 5aa488c4ffffff7f
+      m_SelectedIDs: 5aa488c4
+      m_LastClickedID: -997677990
+      m_ExpandedIDs: fd868b86ae332b9144b3fb9c5aa488c49576efede557abf78359db41ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -372,9 +471,9 @@ MonoBehaviour:
       uniqueId: '[Rush Racing][suite]'
       name: Rush Racing
       fullName: Rush Racing
-      resultStatus: 2
-      duration: 0.0837594
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.1493459
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -384,13 +483,13 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    - id: 1004
+    - id: 1007
       uniqueId: '[Tests.dll][suite]'
       name: Tests.dll
       fullName: C:/Users/bernie/Documents/GitHub/Rush-Racing/Rush Racing/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 2
-      duration: 0.0507004
-      messages: One or more child tests had errors
+      resultStatus: 0
+      duration: 0
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -398,15 +497,15 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1000
+      parentId: 1003
       parentUniqueId: '[Rush Racing][suite]'
-    - id: 1005
+    - id: 1008
       uniqueId: Tests.dll/[Tests][suite]
       name: Tests
       fullName: Tests
-      resultStatus: 2
-      duration: 0.0444709
-      messages: One or more child tests had errors
+      resultStatus: 0
+      duration: 0
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -414,15 +513,15 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1004
+      parentId: 1007
       parentUniqueId: '[Tests.dll][suite]'
-    - id: 1001
+    - id: 1004
       uniqueId: Tests.dll/Tests/[Tests][Tests.NewTestScript][suite]
       name: NewTestScript
       fullName: Tests.NewTestScript
-      resultStatus: 2
-      duration: 0.0369928
-      messages: One or more child tests had errors
+      resultStatus: 0
+      duration: 0
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -430,34 +529,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1005
+      parentId: 1008
       parentUniqueId: Tests.dll/[Tests][suite]
-    - id: 1002
+    - id: 1005
       uniqueId: Tests.dll/Tests/NewTestScript/[Tests][Tests.NewTestScript.NewTestScriptSimplePasses]
       name: NewTestScriptSimplePasses
       fullName: Tests.NewTestScript.NewTestScriptSimplePasses
-      resultStatus: 2
-      duration: 0.0010134
-      messages: "  Expected: 7\r\n  But was:  5\r\n"
-      output: 
-      stacktrace: 'at Tests.NewTestScript.NewTestScriptSimplePasses () [0x00003]
-        in C:\Users\bernie\Documents\GitHub\Rush-Racing\Rush Racing\Assets\Tests\NewTestScript.cs:16
-
-'
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/Tests/[Tests][Tests.NewTestScript][suite]
-    - id: 1003
-      uniqueId: Tests.dll/Tests/NewTestScript/[Tests][Tests.NewTestScript.NewTestScriptWithEnumeratorPasses]
-      name: NewTestScriptWithEnumeratorPasses
-      fullName: Tests.NewTestScript.NewTestScriptWithEnumeratorPasses
-      resultStatus: 1
-      duration: 0.0299008
+      resultStatus: 0
+      duration: 0
       messages: 
       output: 
       stacktrace: 
@@ -467,19 +546,31 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1001
+      parentId: 1004
       parentUniqueId: Tests.dll/Tests/[Tests][Tests.NewTestScript][suite]
-    m_ResultText: 'NewTestScript (0.037s)
-
-      ---
-
-      One or more child tests
-      had errors'
+    - id: 1006
+      uniqueId: Tests.dll/Tests/NewTestScript/[Tests][Tests.NewTestScript.NewTestScriptWithEnumeratorPasses]
+      name: NewTestScriptWithEnumeratorPasses
+      fullName: Tests.NewTestScript.NewTestScriptWithEnumeratorPasses
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/Tests/[Tests][Tests.NewTestScript][suite]
+    m_ResultText: VolumeTester (0.096s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 7dc7445e
-      m_LastClickedID: 1581565821
+      m_SelectedIDs: d5e77cb6
+      m_LastClickedID: -1233328171
       m_ExpandedIDs: 5aa488c4e557abf7d6aa39278359db417dc7445effffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -527,15 +618,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 691
-    width: 1535
-    height: 308
+    x: 8
+    y: 728
+    width: 1557
+    height: 263
   m_ViewDataDictionary: {fileID: 0}
   m_MixersTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
-    m_LastClickedID: -2020
+    m_LastClickedID: 13958
     m_ExpandedIDs: 12eb343c
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -606,16 +697,16 @@ MonoBehaviour:
       splitSize: 6
       xOffset: 0
     m_HorizontalSplitter:
-      ID: 291
+      ID: 522
       splitterInitialOffset: 0
       currentActiveSplitter: -1
-      realSizes: cd01000032040000
+      realSizes: d301000042040000
       relativeSizes:
       - 0.3
       - 0.7
       minSizes: a0000000a0000000
       maxSizes: 0000000000000000
-      lastTotalSize: 1535
+      lastTotalSize: 1557
       splitSize: 6
       xOffset: 0
   m_SectionOrder: 00000000030000000100000002000000
@@ -671,10 +762,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 692
-    width: 1535
-    height: 307
+    x: 8
+    y: 729
+    width: 1557
+    height: 262
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -700,9 +791,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 31}
-    m_SelectedIDs: ca350000
-    m_LastClickedID: 13770
-    m_ExpandedIDs: 00000000ca350000cc350000ce350000d0350000d2350000d4350000d6350000d8350000da350000dc350000de350000
+    m_SelectedIDs: 38390000
+    m_LastClickedID: 14648
+    m_ExpandedIDs: 00000000383900003a3900003c3900003e39000040390000423900004439000046390000483900004a3900004c39000072390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -730,7 +821,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ca350000cc350000ce350000d0350000d2350000d4350000d6350000d8350000da350000dc350000de350000
+    m_ExpandedIDs: 00000000383900003a3900003c3900003e39000040390000423900004439000046390000483900004a3900004c390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -757,8 +848,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c6230000ec3e00001cf8ffff00000000
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c6230000ec3e00001cf8ffff0000000086360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -774,7 +865,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 3}
+      m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -807,10 +898,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1536
-    y: 73
-    width: 383
-    height: 926
+    x: 1566
+    y: 81
+    width: 345
+    height: 910
   m_ViewDataDictionary: {fileID: 0}
   m_OpenAddComponentMenu: 0
   m_ObjectsLockedBeforeSerialization: []
@@ -845,17 +936,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 73
-    width: 379
-    height: 598
+    x: 8
+    y: 81
+    width: 384
+    height: 627
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 0ef7ffff46f7ffff4cfbffff
+      m_ExpandedIDs: 9246ffffaa46ffff3a47ffffe649fffffe49ffffcc4affffca4cffffe64cffffb44dffffb44fffffd04fffff5650ffff5652ffff6e52fffff452fffff254ffff0a55ffff9055ffffda57fffff657ffff8658ffff845affffa05affff305bffff2e5dffff465dffffd65dffffd45fffffec5fffff7260ffff7262ffff8a62ffff5863ffffec65ffff0466ffff8a66ffff9a68ffffb268ffff3869ffff366bffff4e6bffffd46bffffd26dffffea6dffff706effffc270ffffda70ffff6a71ffff7273ffff8e73ffff1474ffff5e76ffff7a76ffff0a77ffff0a79ffff2679ffffac79ffffaa7bffffc27bffff527cffff567effff727effff027fffff0881ffff2481ffffaa81ffffaa83ffffc683ffff4c84ffff4a86ffff6686fffff686ffffa488ffffc088ffff4689ffff488bffff648bffffea8bffffe88dffff008effffd88effff8290ffff9a90ffff2091ffffd092ffffec92ffff7293ffff4096ffff5896ffffe896ffffec98ffff0899ffff9099ffff589bffff749bffff049cffff049effff1c9effffa29effffc6a0ffffdea0ffff6ea1fffff2a3ffff0ea4ffff94a4ffff92a6ffffaaa6ffff3aa7ffff48a9ffff60a9fffff0a9fffff0abffff0cacffff92acffffccaeffffe4aeffff74afffff1eb1ffff36b1ffffc6b1ffff5cb4ffff74b4fffffab4fffffab6ffff16b7ffffa6b7ffffaab9ffffc2b9ffff52baffff5ebcffff7abcffff00bdffff0cbfffff28bfffffaebfffff68c1ffff84c1ffff0ac2ffff16c4ffff2ec4ffffb4c4ffffc0c6ffffdcc6ffff62c7ffff62c9ffff7ec9ffff04caffffe2ccfffffeccffff84cdffff88cfffffa4cfffff2ad0ffff34d2ffff50d2ffff10d3ffffbed4ffffdad4ffff6ad5ffffccd7ffffe8d7ffff78d8ffff58dbffff74dbfffffadbfffff6deffff12dfffff98dfffffc4e1ffffe0e1ffff5ce2ffff32e4ffff4ee4ffffcae4ffffcae6ffffe6e6ffff6ce7ffff86e9ffffa2e9ffff20eaffff34ecffff4cecffff70ecffff26eeffff42eeffffc0eeffffc0f0ffffd8f0ffff56f1ffff66f3ffff82f3ffff00f4ffffc6f6ffffe2f6ffff5cf7ffff40fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -900,10 +991,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 380
-    y: 73
-    width: 1154
-    height: 598
+    x: 393
+    y: 81
+    width: 1171
+    height: 627
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: d36ee4116438d3649be6f32c21e3e637
@@ -915,9 +1006,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 32.282032, y: 11.842029, z: -25.032715}
+    m_Target: {x: 472.45056, y: 279.84842, z: 793.07654}
     speed: 2
-    m_Value: {x: 32.282032, y: 11.842029, z: -25.032715}
+    m_Value: {x: 472.45056, y: 279.84842, z: 793.07654}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -963,13 +1054,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.093479596, y: -0.53678805, z: 0.060002886, w: -0.8363792}
+    m_Target: {x: -0.028799454, y: -0.020079903, z: 0.0005838966, w: -0.99938935}
     speed: 2
-    m_Value: {x: -0.09347912, y: -0.5367853, z: 0.060002577, w: -0.8363749}
+    m_Value: {x: -0.028799282, y: -0.020079784, z: 0.0005838931, w: -0.9993834}
   m_Size:
-    m_Target: 14.830857
+    m_Target: 643.79926
     speed: 2
-    m_Value: 14.830857
+    m_Value: 643.79926
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1015,10 +1106,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 380
-    y: 73
-    width: 1154
-    height: 598
+    x: 393
+    y: 81
+    width: 1171
+    height: 627
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -1028,7 +1119,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1154, y: 577}
+  m_TargetSize: {x: 1171, y: 606}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1043,10 +1134,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -577
-    m_HBaseRangeMax: 577
-    m_VBaseRangeMin: -288.5
-    m_VBaseRangeMax: 288.5
+    m_HBaseRangeMin: -585.5
+    m_HBaseRangeMax: 585.5
+    m_VBaseRangeMin: -303
+    m_VBaseRangeMax: 303
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1064,23 +1155,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1154
-      height: 577
+      width: 1171
+      height: 606
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 577, y: 288.5}
+    m_Translation: {x: 585.5, y: 303}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -577
-      y: -288.5
-      width: 1154
-      height: 577
+      x: -585.5
+      y: -303
+      width: 1171
+      height: 606
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1154, y: 598}
+  m_LastWindowPixelSize: {x: 1171, y: 627}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -1107,8 +1198,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 692
-    width: 1535
-    height: 307
+    x: 8
+    y: 729
+    width: 1557
+    height: 262
   m_ViewDataDictionary: {fileID: 0}
