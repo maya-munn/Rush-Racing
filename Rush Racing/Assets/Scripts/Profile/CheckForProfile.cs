@@ -19,7 +19,7 @@ public class CheckForProfile : MonoBehaviour
     public void CheckExistingProfile()
     {
         //Create new instance of UserTable for DB access
-        UserTable userTable = gameObject.AddComponent<UserTable>();
+        UserTable userTable = new UserTable();
         bool existingUser = userTable.CheckForExistingUsers();
 
         //Change scene to createprofile if there is no existing user profile

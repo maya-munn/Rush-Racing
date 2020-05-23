@@ -1,20 +1,39 @@
 ﻿using NUnit.Framework;
+using UnityEngine;
 
 /// <summary>
+/// Unit testing for user currency
 /// Author: Maya Ashizumi-Munn
 /// </summary>
-public class CurrencyTest
+
+namespace Tests
 {
-
-    [Test]
-    public void AddCurrency_Test()
+    public class CurrencyTest
     {
+        CurrencyTable currencyScript;
 
-    }
+        [SetUp]
+        public void SetUp()
+        {
+            currencyScript = new CurrencyTable();
+        }
 
-    [Test]
-    public void RemoveCurrency_Test()
-    {
+        [Test]
+        public void AddCurrency_Test()
+        {
 
+        }
+
+        [Test]
+        public void RemoveCurrency_Test()
+        {
+
+        }
+
+        [Test]
+        public void CheckIfCanAfford_Test()
+        {
+
+        }
     }
 }

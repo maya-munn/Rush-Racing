@@ -81,17 +81,17 @@ public class MenuController : MonoBehaviour
         this.MainMenu();
         Scene mainScene = SceneManager.GetActiveScene();
 
-        //Find canvas object
-        GameObject canvasObject = GameObject.Find("Canvas");
+        ////Find canvas object
+        //GameObject canvasObject = GameObject.Find("Canvas");
 
-        //Find canvas menu objects
-        GameObject mainMenu = canvasObject.transform.Find("MainMenu").gameObject;
-        GameObject playMenu = canvasObject.transform.Find("PlayMenu").gameObject;
-        GameObject optionsMenu = canvasObject.transform.Find("OptionMenu").gameObject;
+        ////Find canvas menu objects
+        //GameObject mainMenu = canvasObject.transform.Find("MainMenu").gameObject;
+        //GameObject playMenu = canvasObject.transform.Find("PlayMenu").gameObject;
+        //GameObject optionsMenu = canvasObject.transform.Find("OptionMenu").gameObject;
 
-        //Set only options menu visibility to true
-        mainMenu.SetActive(false);
-        playMenu.SetActive(false);
-        optionsMenu.SetActive(true);
+        ////Set only options menu visibility to true
+        //mainMenu.SetActive(false);
+        //playMenu.SetActive(false);
+        //optionsMenu.SetActive(true);
     }
 }

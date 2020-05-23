@@ -1,41 +1,72 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
+using UnityEngine.UI;
 
+/// <summary>
+/// Author: Maya Ashizumi-Munn
+/// </summary>
 public class ProfileListManager : MonoBehaviour
 {
     public GameObject userOnePlayButton;
     public GameObject userTwoPlayButton;
     public GameObject userThreePlayButton;
 
+    public GameObject userOneNameText;
+    public GameObject userTwoNameText;
+    public GameObject userThreeNameText;
+
+    public GameObject delButtonOne;
+    public GameObject delButtonTwo;
+    public GameObject delButtonThree;
+
+    public GameObject userOneCoinsText;
+    public GameObject userTwoCoinsText;
+    public GameObject userThreeCoinsText;
+
     //Stores the status of which slots contain existing profiles
     bool[] existingProfiles;
 
-    void Start()
+    void Update()
     {
+        userOneNameText.SetActive(false);
+        userTwoNameText.SetActive(false);
+        userThreeNameText.SetActive(false);
+        userOneCoinsText.SetActive(false);
+        userTwoCoinsText.SetActive(false);
+        userThreeCoinsText.SetActive(false);
+
         //Get which user profiles at which index exist
-        existingProfiles = gameObject.AddComponent<UserTable>().existingProfileIndices();
-    }
+        existingProfiles = new UserTable().existingProfileIndices();
 
-    //Methods for button onClicks
-    public void switchToUserOne()
-    {
-        //If set to true (profile exists at first slot)
-        if (existingProfiles[0])
+        if (existingProfiles[0] == true)
         {
-            //Then load in the profile at this slot and return into main menu
+            userOneNameText.SetActive(true);
+            userOneCoinsText.SetActive(true);
+            userOneNameText.GetComponent<Text>().text = PlayerPrefs.GetString("UserOneName");
+            userOneCoinsText.GetComponent<Text>().text = "Coins: " + PlayerPrefs.GetInt("UserOneCoins");
 
+            userOnePlayButton.GetComponent<Button>().interactable = true;
+            delButtonOne.GetComponent<Button>().interactable = true;
         }
-        else
+        if (existingProfiles[1] == true)
         {
-            //Else redirect to create profile scene
+            userTwoNameText.SetActive(true);
+            userTwoCoinsText.SetActive(true);
+            userTwoNameText.GetComponent<Text>().text = PlayerPrefs.GetString("UserTwoName");
+            userTwoCoinsText.GetComponent<Text>().text = "Coins: " + PlayerPrefs.GetInt("UserTwoCoins");
+
+            userTwoPlayButton.GetComponent<Button>().interactable = true;
+            delButtonTwo.GetComponent<Button>().interactable = true;
         }
-        PlayerPrefs.SetInt("CurrentUserID", 1);
-    }
-    public void switchToUserTwo()
-    {
-        PlayerPrefs.SetInt("CurrentUserID", 2);
-    }
-    public void switchToUserThree()
-    {
-        PlayerPrefs.SetInt("CurrentUserID", 3);
+        if (existingProfiles[2] == true)
+        {
+            userThreeNameText.SetActive(true);
+            userThreeCoinsText.SetActive(true);
+            userThreeNameText.GetComponent<Text>().text = PlayerPrefs.GetString("UserThreeName");
+            userThreeCoinsText.GetComponent<Text>().text = "Coins: " + PlayerPrefs.GetInt("UserThreeCoins");
+
+            userThreePlayButton.GetComponent<Button>().interactable = true;
+            delButtonThree.GetComponent<Button>().interactable = true;
+        }
     }
 }
