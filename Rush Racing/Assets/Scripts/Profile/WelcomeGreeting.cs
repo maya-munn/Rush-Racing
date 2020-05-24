@@ -42,7 +42,7 @@ public class WelcomeGreeting : MonoBehaviour
     private bool checkUserProfileExists()
     {
         //Create new instance of UserTable for DB access
-        bool existingUser = new UserTable().CheckForExistingUsers();
+        bool existingUser = gameObject.AddComponent<UserTable>().CheckForExistingUsers();
 
         //Return true if user exists
         return existingUser;

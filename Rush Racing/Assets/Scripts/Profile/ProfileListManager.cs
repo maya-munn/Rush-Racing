@@ -36,7 +36,7 @@ public class ProfileListManager : MonoBehaviour
         userThreeCoinsText.SetActive(false);
 
         //Get which user profiles at which index exist
-        existingProfiles = new UserTable().existingProfileIndices();
+        existingProfiles = gameObject.AddComponent<UserTable>().existingProfileIndices();
 
         if (existingProfiles[0] == true)
         {

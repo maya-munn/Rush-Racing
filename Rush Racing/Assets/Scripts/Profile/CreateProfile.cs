@@ -34,7 +34,7 @@ public class CreateProfile : MonoBehaviour
     void Start()
     {
         //Create a DB connection through UserTable script
-        userTable = new UserTable();
+        userTable = gameObject.AddComponent<UserTable>();
     }
 
     private void Update()

@@ -1,4 +1,4 @@
-﻿using Mono.Data.Sqlite;
+﻿
 using UnityEngine;
 
 /// <summary>
@@ -8,7 +8,7 @@ using UnityEngine;
 /// 
 /// Author: Maya Ashizumi-Munn
 /// </summary>
-public class UserTable
+public class UserTable : MonoBehaviour
 {
 	//SqliteCommand cmnd;
 	//new SqliteConnection dbcon;

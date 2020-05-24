@@ -4,7 +4,7 @@
 /// 
 /// Author: Maya Ashizumi-Munn
 /// </summary>
-public class CurrencyTable
+public class CurrencyTable : MonoBehaviour
 {
 	//SqliteCommand cmnd;
 	//new SqliteConnection dbcon;
@@ -137,7 +137,6 @@ public class CurrencyTable
 				}
 			default:
 				return false;
-				break;
 		}
 	}
 }

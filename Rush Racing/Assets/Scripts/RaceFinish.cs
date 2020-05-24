@@ -12,8 +12,6 @@ public class RaceFinish : MonoBehaviour
     void OnTriggerEnter()
     {
         StatsPanel.SetActive(true);
-
-        //Add coins to current user
-        new CurrencyTable().AddToUserCurrency(500);
+        gameObject.AddComponent<CurrencyTable>().AddToUserCurrency(500);
     }
 }
