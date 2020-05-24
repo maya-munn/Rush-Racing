@@ -83,7 +83,7 @@ public class CarController : MonoBehaviour
             else
             {
                 //If not braking, move the car
-                wheel.motorTorque = strengthCoefficient * Time.deltaTime * im.throttle;
+                wheel.motorTorque = (strengthCoefficient * Time.deltaTime * im.throttle) * 2;
                 wheel.brakeTorque = 0f; //If driving, do not set any brake
             }
         }

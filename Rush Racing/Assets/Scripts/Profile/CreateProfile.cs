@@ -54,6 +54,10 @@ public class CreateProfile : MonoBehaviour
 
     //************************************//
 
+    /// <summary>
+    /// Creates a new profile at a certain index
+    /// </summary>
+    /// <param name="indexAt">Index either 1, 2 or 3 of save slots</param>
     public void createProfile()
     {
         //check if pin number is 4 integer numbers
@@ -67,25 +71,47 @@ public class CreateProfile : MonoBehaviour
             string username = usernameTextBox.GetComponent<Text>().text;
             int pin = createPinHash(pinString);
 
-            //Check if theres an existing user
-            bool existing = userTable.CheckForExistingUsers();
-            if (existing)
+            int indexAt = 0;
+            //Get free user index
+            if (PlayerPrefs.GetInt("UserOneID") == 0)
             {
-                //If theres a user already, override its userID
-                //at userID 1 as that is default
-                userTable.CreateOverrideUser(username, pin, 1);
+                //ID 1 is free
+                indexAt = 1;
+                PlayerPrefs.SetInt("UserOneCoins", 100);
             }
             else
             {
-                //Create user normally
-                userTable.CreateNewUser(username, pin);
+                //ID 1 is not free
+                if (PlayerPrefs.GetInt("UserTwoID") == 0)
+                {
+                    //ID 2 is free
+                    indexAt = 2;
+                    PlayerPrefs.SetInt("UserTwoCoins", 100);
+                }
+                else
+                {
+                    //ID 2 is not free
+                    if (PlayerPrefs.GetInt("UserThreeID") == 0)
+                    {
+                        indexAt = 3;
+                        PlayerPrefs.SetInt("UserThreeCoins", 100);
+                    }
+                }
             }
 
-            //Query for ID based on username (both unique)
-            int userID = userTable.GetIDFromUsername(username);
-            PlayerPrefs.SetInt("SessionUserID", userID);
-
-            SceneManager.LoadScene(mainMenuSceneIndex);
+            //If all IDs were not free, prompt user to delete one
+            if (indexAt == 0)
+            {
+                feedbackLabel.SetActive(true);
+                string feedback = "No empty user profile slots! Please delete one before creating a new profile";
+                feedbackText.GetComponent<Text>().text = feedback;
+            }
+            else
+            {
+                //Create user
+                userTable.CreateNewUser(username, pin, indexAt);
+                SceneManager.LoadScene(mainMenuSceneIndex);
+            }
         }
         else
         {
