@@ -4,12 +4,10 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-/* <summary>
+/*  Authors: Bernadette Cruz
  *  Checks if checkbox "Mute Volume" is toggled on and off
  *  mutes and removes slider interactability if checked, unmutes to previous slider value if unchecked.
- *  Authors: Bernadette Cruz
- *
- *  </summary>
+
  * ----FUTURE IMPLEMENTATIONS: Mute volume according to saved user settings
  */
 
