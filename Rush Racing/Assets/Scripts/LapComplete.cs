@@ -3,39 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Author: Immanuel Siregar
+//Inspired from Jimmy Vegas' Unity Tutorial
+
 public class LapComplete : MonoBehaviour
 {
     //The Finish Line trigger and the Halfway Checkpoint trigger
     public GameObject LapCompleteTrig;
     public GameObject HalfLapTrig;
 
+    //The GameObjects that will hold the digits representing the time (Minutes, Seconds, Milliseconds).
     public GameObject MinuteDisplay;
     public GameObject SecondDisplay;
     public GameObject MilliDisplay;
 
+    //Will hold the display objects
     public GameObject LapTimeBox;
 
+    //Lap Counter will hold the LapsDone integer, which will increment once player has completed a lap.
     public GameObject LapCounter;
     public int LapsDone;
 
-    public float RawTime;
     public GameObject RaceFinish;
 
-    void Update()
-    {
-      if (LapsDone == 4){
-          RaceFinish.SetActive(true);
-      }
+    //Will set the status of RaceFinish to true, which will unlock the last checkpoint which will throw up the scoreboard.
+    public void Update(){
+    if (LapsDone == 4){
+        RaceFinish.SetActive(true);
+    }
     }
 
-    void OnTriggerEnter()
+    public void OnTriggerEnter()
     {
+        //Increments the player's laps done by one everytime they enter the trigger
         LapsDone += 1;
-        RawTime = PlayerPrefs.GetFloat("RawTime");
 
-        if(LapTimeManager.RawTime <= RawTime)
-        {
-            if (LapTimeManager.SecondCount <= 9)
+        //For the Lap Timer, it will reset the Millisecond, Second, and Minute displays back to zero, and starts the new lap from zero. The nested if statement will basically handle the string content in the Lap 
+        if (LapTimeManager.SecondCount <= 9)
             {
                 SecondDisplay.GetComponent<Text>().text = "0" + LapTimeManager.SecondCount + ".";
             }
@@ -54,21 +58,17 @@ public class LapComplete : MonoBehaviour
             }
 
             MilliDisplay.GetComponent<Text>().text = "" + LapTimeManager.MilliCount;
-        }
+        
 
-
-        PlayerPrefs.SetInt("MinSave", LapTimeManager.MinuteCount);
-        PlayerPrefs.SetInt("SecSave", LapTimeManager.SecondCount);
-        PlayerPrefs.SetFloat("MilliSave", LapTimeManager.MilliCount);
-        PlayerPrefs.SetFloat("RawTime", LapTimeManager.RawTime);
-
+        //Will reset the lap time to 0 everytime the player completes a lap.
         LapTimeManager.MinuteCount = 0;
         LapTimeManager.SecondCount = 0;
         LapTimeManager.MilliCount = 0;
-        LapTimeManager.RawTime = 0;
 
+        //The LapsDone (and therefore the LapCounter) will update whenever a player completes a lap.
         LapCounter.GetComponent<Text>().text = "" + LapsDone;
 
+        //Initially, the LapCompleteTrig (a trigger in the form of an invisible game shape entity) will be set to false, while the HalfLapTrig (a similar checkpoint in the middle of the track) will be active. This means the player has to cross the halfway checkpoint before entering the Lap Complete trigger.
         HalfLapTrig.SetActive(true);
         LapCompleteTrig.SetActive(false);
     }

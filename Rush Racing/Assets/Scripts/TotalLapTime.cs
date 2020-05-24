@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Author: Immanuel Siregar
+//Basically the same as LapTimeManager but without resetting the timer every time the player finishes a lap and outputs it to a new timer.
 public class TotalLapTime : MonoBehaviour
 {
     public static int TotalMinCount;
