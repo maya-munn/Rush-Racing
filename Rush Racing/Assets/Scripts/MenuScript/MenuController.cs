@@ -19,7 +19,9 @@ public class MenuController : MonoBehaviour
         Tournament = 2,
         Garage = 3,
         RaceScene = 4,
-        ProfileCreation = 5
+        ProfileCreation = 5,
+        ProfileList = 6,
+        Options = 7
     }
 
     //**************************//
@@ -34,6 +36,10 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene((int)SceneIndex.FreePlay);
     }
 
+    public void ProfileList(){
+        SceneManager.LoadScene((int)SceneIndex.ProfileList);
+    }
+    
     public void TournamentMode()
     {
         SceneManager.LoadScene((int)SceneIndex.Tournament);
@@ -72,21 +78,6 @@ public class MenuController : MonoBehaviour
     /// </summary>
     public void OptionsMenu()
     {
-        //Load main menu scene
-        this.MainMenu();
-        Scene mainScene = SceneManager.GetActiveScene();
-
-        //Find canvas object
-        GameObject canvasObject = GameObject.Find("Canvas");
-
-        //Find canvas menu objects
-        GameObject mainMenu = canvasObject.transform.Find("MainMenu").gameObject;
-        GameObject playMenu = canvasObject.transform.Find("PlayMenu").gameObject;
-        GameObject optionsMenu = canvasObject.transform.Find("OptionMenu").gameObject;
-
-        //Set only options menu visibility to true
-        mainMenu.SetActive(false);
-        playMenu.SetActive(false);
-        optionsMenu.SetActive(true);
+        SceneManager.LoadScene((int)SceneIndex.Options);
     }
 }

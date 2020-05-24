@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu/ProfileCreation.unity
     guid: 9bc48ada0d0d7cf42ae02da0293ef274
+  - enabled: 1
+    path: Assets/Scenes/Menu/ProfileList.unity
+    guid: 4e8e31163960f6544a2811e2640389b9
+  - enabled: 1
+    path: Assets/Scenes/Menu/Options menu.unity
+    guid: c5cb928e4e6e59f459bd15b6a05abc58
   m_configObjects: {}
