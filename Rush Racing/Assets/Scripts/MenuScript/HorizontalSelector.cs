@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -34,7 +33,7 @@ public class HorizontalSelector : MonoBehaviour
     {
 
 
-        text = transform.Find("Text").GetComponent<TextMeshProUGUI>();
+        text = transform.Find("Text").GetComponent<TMPro.TextMeshProUGUI>();
         if ( transform.Find("Image"))
         {
             image = transform.Find("Image").GetComponent<RawImage>();
