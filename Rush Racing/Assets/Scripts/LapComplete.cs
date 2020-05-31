@@ -33,14 +33,10 @@ public class LapComplete : MonoBehaviour
     }
     }
 
-    public void LapIncrementer(){
-        LapsDone++;
-    }
-
     public void OnTriggerEnter()
     {
         //Increments the player's laps done by one everytime they enter the trigger
-        LapIncrementer();
+        LapsDone += 1;
 
         //For the Lap Timer, it will reset the Millisecond, Second, and Minute displays back to zero, and starts the new lap from zero. The nested if statement will basically handle the string content in the Lap 
         if (LapTimeManager.SecondCount <= 9)
