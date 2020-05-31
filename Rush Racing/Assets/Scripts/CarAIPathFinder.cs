@@ -11,6 +11,7 @@ public class CarAIPathFinder : MonoBehaviour
     public WheelCollider wheelFL;
     public WheelCollider wheelFR;
 
+    //Gets all the waypoints from the CarPathAI script.
     void Start()
     {
         Transform[] pathPositions = carPath.GetComponentsInChildren<Transform>();
@@ -29,6 +30,7 @@ public class CarAIPathFinder : MonoBehaviour
         CarNavigation();
     }
 
+    //Allows the car to turn/rotate according to the vector of the next waypoint.
     private void CarSteer(){
         Vector3 travelVect = transform.InverseTransformPoint(pathPoints[currentPoint].position);
         travelVect = travelVect / travelVect.magnitude;
@@ -37,13 +39,15 @@ public class CarAIPathFinder : MonoBehaviour
         wheelFR.steerAngle = newSteer;
     }
 
+    //Allows the car to start moving by itself
     void CarDrive(){
-        wheelFL.motorTorque = 500f;
-        wheelFR.motorTorque = 500f;
+        wheelFL.motorTorque = 211000f;
+        wheelFR.motorTorque = 211000f;
     }
 
+    //Makes the car follow the next waypoint once it has gotten near the first one.
     void CarNavigation(){
-        if(Vector3.Distance(transform.position, pathPoints[currentPoint].position) < 0.05f){
+        if(Vector3.Distance(transform.position, pathPoints[currentPoint].position) < 2f){
             if(currentPoint == pathPoints.Count - 1){
                 currentPoint = 0;
             } else{
