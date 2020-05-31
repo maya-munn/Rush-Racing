@@ -29,7 +29,7 @@ public class CarAIPathFinder : MonoBehaviour
         CarNavigation();
     }
 
-    private void CarSter(){
+    private void CarSteer(){
         Vector3 travelVect = transform.InverseTransformPoint(pathPoints[currentPoint].position);
         travelVect = travelVect / travelVect.magnitude;
         float newSteer = (travelVect.x / travelVect.magnitude)* maxSteerAngle;
