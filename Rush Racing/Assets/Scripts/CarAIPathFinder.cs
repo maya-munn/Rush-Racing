@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Author: Immanuel Siregar
+//This will allow the car to navigate through the path points set in CarPathAI.cs
 public class CarAIPathFinder : MonoBehaviour
 {
     public Transform carPath;
@@ -41,8 +43,8 @@ public class CarAIPathFinder : MonoBehaviour
 
     //Allows the car to start moving by itself
     void CarDrive(){
-        wheelFL.motorTorque = 211000f;
-        wheelFR.motorTorque = 211000f;
+        wheelFL.motorTorque = 100000f;
+        wheelFR.motorTorque = 100000f;
     }
 
     //Makes the car follow the next waypoint once it has gotten near the first one.
