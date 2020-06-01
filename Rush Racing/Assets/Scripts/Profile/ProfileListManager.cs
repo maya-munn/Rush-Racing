@@ -19,6 +19,10 @@ public class ProfileListManager : MonoBehaviour
     public GameObject delButtonTwo;
     public GameObject delButtonThree;
 
+    public GameObject settingsButtonOne;
+    public GameObject settingsButtonTwo;
+    public GameObject settingsButtonThree;
+
     public GameObject userOneCoinsText;
     public GameObject userTwoCoinsText;
     public GameObject userThreeCoinsText;
@@ -47,6 +51,7 @@ public class ProfileListManager : MonoBehaviour
 
             userOnePlayButton.GetComponent<Button>().interactable = true;
             delButtonOne.GetComponent<Button>().interactable = true;
+            settingsButtonOne.GetComponent<Button>().interactable = true;
         }
         if (existingProfiles[1] == true)
         {
@@ -57,6 +62,7 @@ public class ProfileListManager : MonoBehaviour
 
             userTwoPlayButton.GetComponent<Button>().interactable = true;
             delButtonTwo.GetComponent<Button>().interactable = true;
+            settingsButtonTwo.GetComponent<Button>().interactable = true;
         }
         if (existingProfiles[2] == true)
         {
@@ -67,6 +73,7 @@ public class ProfileListManager : MonoBehaviour
 
             userThreePlayButton.GetComponent<Button>().interactable = true;
             delButtonThree.GetComponent<Button>().interactable = true;
+            settingsButtonThree.GetComponent<Button>().interactable = true;
         }
     }
 }
