@@ -1,11 +1,13 @@
 {
-    "name": "Tests",
+    "name": "EditModeTests",
     "references": [
-        "GameAssembly",
         "UnityEngine.TestRunner",
-        "UnityEditor.TestRunner"
+        "UnityEditor.TestRunner",
+        "ScriptAssembly"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,

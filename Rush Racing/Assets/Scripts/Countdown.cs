@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 //Author: Immanuel Siregar
-//This code was heavily inspired by the code from Jimmy Vegas' Unity Racing Game tutorial. Assets 'GetReady' and 'GoAudio' were used from his website, as placeholders right now. As development continues, we would likely use or create our own assets.
+//This code was inspired by the code from Jimmy Vegas' Unity Racing Game tutorial. Assets 'GetReady' and 'GoAudio' were used from his website, as placeholders right now. As development continues, we would likely use or create our own assets.
 //Update (Bernadette Cruz): added disable car controls during countdown, which is enabled after countdown finishes.
 //Update (Maya Ashizumi-Mun): added royalty-free music during the race
 public class Countdown : MonoBehaviour
