@@ -17,6 +17,7 @@ public class AwakeManager : MonoBehaviour
 
     private void Awake()
     {
+        PlayerPrefs.SetInt("currency", 20000);
         pointer_car = PlayerPrefs.GetInt("pointer");
         currency.text = "$" + PlayerPrefs.GetInt("currency").ToString("");
 
