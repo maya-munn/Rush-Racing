@@ -1,4 +1,0 @@
-﻿[*.cs]
-
-# UNT0010: MonoBehaviour instance creation
-dotnet_diagnostic.UNT0010.severity = none
