@@ -54,29 +54,31 @@ public class AwakeManager : MonoBehaviour
 
     public void AcquireCar()
     {
-        carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().acquire = true;
+       
         if (PlayerPrefs.GetInt("currency") >= carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().price) {
 
-            PlayerPrefs.SetString(carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().name.ToString(),
-                                    carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().name.ToString());
-            PlayerPrefs.GetInt("currency", PlayerPrefs.GetInt("currency") - carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().price);
+            PlayerPrefs.SetString(carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().getCarname(),
+                                    carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().getCarname());
+            PlayerPrefs.SetInt("currency", PlayerPrefs.GetInt("currency") - carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().price);
+            Debug.Log(PlayerPrefs.GetInt("currency").ToString());
         }
         GetCarDetail();
         currency.text = "$" + PlayerPrefs.GetInt("currency").ToString("");
     }
     public void GetCarDetail()
     {
-        if (carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().name.ToString() ==
-            PlayerPrefs.GetString(carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().name.ToString()))
+        Debug.Log(carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().getCarname());
+        if (carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().getCarname() ==
+            PlayerPrefs.GetString(carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().getCarname()))
             {
             Acquirebutton.SetActive(false);
-            cardetail.text = carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().name.ToString();
+            cardetail.text = carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().getCarname();
 
         }
         else
         {
             Acquirebutton.SetActive(true);
-            cardetail.text = carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().name.ToString() + carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().price.ToString();
+            cardetail.text = carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().getCarname() +"\n$"+ carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().price.ToString();
  
         }
     }

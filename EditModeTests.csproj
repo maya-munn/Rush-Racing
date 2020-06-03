@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F4DB1BC3-D42A-759C-1D9B-45BF92930077}</ProjectGuid>
+    <ProjectGuid>{682E8D1B-068D-48DD-F169-30AAB460B17B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>EditModeTests</AssemblyName>
@@ -286,7 +286,7 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>C:/Users/amasvinx/Documents/GitHub/Rush-Racing/Rush Racing/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>C:/Users/amasvinx/Documents/GitHub/Rush-Racing/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/2019.3.15f1/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -652,21 +652,21 @@
       <HintPath>C:/Program Files/2019.3.15f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-      <HintPath>C:/Users/amasvinx/Documents/GitHub/Rush-Racing/Rush Racing/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>C:/Users/amasvinx/Documents/GitHub/Rush-Racing/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.TestRunner">
-      <HintPath>C:/Users/amasvinx/Documents/GitHub/Rush-Racing/Rush Racing/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+      <HintPath>C:/Users/amasvinx/Documents/GitHub/Rush-Racing/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/amasvinx/Documents/GitHub/Rush-Racing/Rush Racing/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/amasvinx/Documents/GitHub/Rush-Racing/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/amasvinx/Documents/GitHub/Rush-Racing/Rush Racing/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/amasvinx/Documents/GitHub/Rush-Racing/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="ScriptAssembly.csproj">
-      <Project>{3B598382-AF5C-7B17-CE10-C150316A5894}</Project>
+      <Project>{C28AD421-F8FF-ABA2-5D55-550CADE71FFD}</Project>
       <Name>ScriptAssembly</Name>
     </ProjectReference>
   </ItemGroup>

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3B598382-AF5C-7B17-CE10-C150316A5894}</ProjectGuid>
+    <ProjectGuid>{C28AD421-F8FF-ABA2-5D55-550CADE71FFD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>ScriptAssembly</AssemblyName>
@@ -72,6 +72,9 @@
     <Compile Include="Assets\Scripts\DBImport.cs" />
     <Compile Include="Assets\Scripts\Database\CurrencyTable.cs" />
     <Compile Include="Assets\Scripts\Database\UserTable.cs" />
+    <Compile Include="Assets\Scripts\Garage\AwakeManager.cs" />
+    <Compile Include="Assets\Scripts\Garage\CarDetail.cs" />
+    <Compile Include="Assets\Scripts\Garage\Cars.cs" />
     <Compile Include="Assets\Scripts\HalfPointTrigger.cs" />
     <Compile Include="Assets\Scripts\LapComplete.cs" />
     <Compile Include="Assets\Scripts\LapTimeManager.cs" />
@@ -669,13 +672,13 @@
       <HintPath>C:/Program Files/2019.3.15f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/amasvinx/Documents/GitHub/Rush-Racing/Rush Racing/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/amasvinx/Documents/GitHub/Rush-Racing/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/amasvinx/Documents/GitHub/Rush-Racing/Rush Racing/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/amasvinx/Documents/GitHub/Rush-Racing/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/amasvinx/Documents/GitHub/Rush-Racing/Rush Racing/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/amasvinx/Documents/GitHub/Rush-Racing/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>

@@ -1096,9 +1096,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d80e08180c36e7f4b9d6dc1d2ced559e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acquire: 1
   price: 1200
-  name: Greeennn
+  car_name: Greeennn
 --- !u!1 &7623996682674363734
 GameObject:
   m_ObjectHideFlags: 0

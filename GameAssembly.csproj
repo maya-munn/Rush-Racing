@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F0B2906A-3DC3-9F6D-BBBB-77D32CAB118B}</ProjectGuid>
+    <ProjectGuid>{0E256F90-3947-575F-B2E0-DC0A9B0C015C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>GameAssembly</AssemblyName>
@@ -63,9 +63,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AwakeManager.cs" />
-    <Compile Include="Assets\CarDetail.cs" />
-    <Compile Include="Assets\Cars.cs" />
     <Compile Include="Assets\Minimap Components\Minimap.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
@@ -699,13 +696,13 @@
       <HintPath>C:/Program Files/2019.3.15f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/amasvinx/Documents/GitHub/Rush-Racing/Rush Racing/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/amasvinx/Documents/GitHub/Rush-Racing/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/amasvinx/Documents/GitHub/Rush-Racing/Rush Racing/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/amasvinx/Documents/GitHub/Rush-Racing/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/amasvinx/Documents/GitHub/Rush-Racing/Rush Racing/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/amasvinx/Documents/GitHub/Rush-Racing/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>

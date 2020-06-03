@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class CarDetail : MonoBehaviour
 {
-    public bool acquire;
+
     public int price;
-    public string name;
+    public string car_name;
+
+    public string getCarname()
+    {
+        return car_name;
+    }
 }
