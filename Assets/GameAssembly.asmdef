@@ -1,0 +1,16 @@
+{
+    "name": "GameAssembly",
+    "references": [
+        "GUID:d18adb9d10e915147acec7137f820d61",
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
