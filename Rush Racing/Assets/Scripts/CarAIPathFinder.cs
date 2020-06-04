@@ -43,8 +43,8 @@ public class CarAIPathFinder : MonoBehaviour
 
     //Allows the car to start moving by itself
     void CarDrive(){
-        wheelFL.motorTorque = 100000f;
-        wheelFR.motorTorque = 100000f;
+        wheelFL.motorTorque = 100000000f;
+        wheelFR.motorTorque = 100000000f;
     }
 
     //Makes the car follow the next waypoint once it has gotten near the first one.
