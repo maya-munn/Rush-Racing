@@ -12,6 +12,9 @@ public class CarAIPathFinder : MonoBehaviour
     public float maxSteerAngle = 45f;
     public WheelCollider wheelFL;
     public WheelCollider wheelFR;
+    public WheelCollider wheelBL;
+    public WheelCollider wheelBR;
+    public float carStrength = 150f;
 
     //Gets all the waypoints from the CarPathAI script.
     void Start()
@@ -39,12 +42,19 @@ public class CarAIPathFinder : MonoBehaviour
         float newSteer = (travelVect.x / travelVect.magnitude)* maxSteerAngle;
         wheelFL.steerAngle = newSteer;
         wheelFR.steerAngle = newSteer;
+        //both of the back wheels will steer inversely from the front.
+        wheelBL.steerAngle = (1 - newSteer);
+        wheelBR.steerAngle = (1 - newSteer);
     }
 
     //Allows the car to start moving by itself
     void CarDrive(){
-        wheelFL.motorTorque = 100000000f;
-        wheelFR.motorTorque = 100000000f;
+        wheelFL.motorTorque = carStrength * 2;
+        wheelFR.motorTorque = carStrength * 2;
+        wheelBL.motorTorque = carStrength * 2;  
+        wheelBR.motorTorque = carStrength * 2;
+
+    
     }
 
     //Makes the car follow the next waypoint once it has gotten near the first one.

@@ -15539,6 +15539,9 @@ MonoBehaviour:
   maxSteerAngle: 45
   wheelFL: {fileID: 520533910}
   wheelFR: {fileID: 1256604896}
+  wheelBL: {fileID: 1525425997}
+  wheelBR: {fileID: 1028388947}
+  carStrength: 20000
 --- !u!1001 &1583939874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20464,7 +20467,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125164099}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.65, y: 0.69, z: -30.91}
+  m_LocalPosition: {x: -11.5, y: 0.69, z: -30.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 360715050}
