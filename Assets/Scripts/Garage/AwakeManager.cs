@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class AwakeManager : MonoBehaviour
 {
-    // Start is called before the first frame update
     public Cars carlist;
     public int pointer_car;
     public GameObject Acquirebutton;
@@ -17,13 +13,14 @@ public class AwakeManager : MonoBehaviour
 
     private void Awake()
     {
-        PlayerPrefs.SetInt("currency", 20000);
         pointer_car = PlayerPrefs.GetInt("pointer");
-        currency.text = "$" + PlayerPrefs.GetInt("currency").ToString("");
+        currency.text = "$" + PlayerPrefs.GetInt("CurrentUserCoins").ToString("");
 
         GameObject childObject = Instantiate(carlist.car[pointer_car], Vector3.zero, Quaternion.identity) as GameObject;
         childObject.tag = "player";
         GetCarDetail();
+
+        this.CheckIfCanAfford(); //Toggle AQUIRE button if can/can't afford
     }
 
 
@@ -38,6 +35,8 @@ public class AwakeManager : MonoBehaviour
         GameObject childObject = Instantiate(carlist.car[pointer_car], Vector3.zero, Quaternion.identity) as GameObject;
         childObject.tag = "player";
         GetCarDetail();
+
+        this.CheckIfCanAfford(); //Toggle AQUIRE button if can/can't afford
     }
     public void PreviousCarButton()
     {
@@ -50,36 +49,58 @@ public class AwakeManager : MonoBehaviour
         GameObject childObject = Instantiate(carlist.car[pointer_car], Vector3.zero, Quaternion.identity) as GameObject;
         childObject.tag = "player";
         GetCarDetail();
+
+        this.CheckIfCanAfford(); //Toggle AQUIRE button if can/can't afford
     }
 
     public void AcquireCar()
     {
        
-        if (PlayerPrefs.GetInt("currency") >= carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().price) {
+        if (PlayerPrefs.GetInt("CurrentUserCoins") >= carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().price) {
 
             PlayerPrefs.SetString(carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().getCarname(),
                                     carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().getCarname());
-            PlayerPrefs.SetInt("currency", PlayerPrefs.GetInt("currency") - carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().price);
-            Debug.Log(PlayerPrefs.GetInt("currency").ToString());
+            PlayerPrefs.SetInt("CurrentUserCoins", PlayerPrefs.GetInt("CurrentUserCoins") - carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().price);
+            //Debug.Log(PlayerPrefs.GetInt("CurrentUserCoins").ToString());
         }
         GetCarDetail();
-        currency.text = "$" + PlayerPrefs.GetInt("currency").ToString("");
+        currency.text = "$" + PlayerPrefs.GetInt("CurrentUserCoins").ToString("");
     }
     public void GetCarDetail()
     {
-        Debug.Log(carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().getCarname());
+        //Debug.Log(carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().getCarname());
         if (carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().getCarname() ==
             PlayerPrefs.GetString(carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().getCarname()))
             {
-            Acquirebutton.SetActive(false);
-            cardetail.text = carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().getCarname();
+            //Acquirebutton.SetActive(false);
+            cardetail.text = carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().getCarname() + " $" + carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().GetCarPrice();
 
         }
         else
         {
-            Acquirebutton.SetActive(true);
-            cardetail.text = carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().getCarname() +"\n$"+ carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().price.ToString();
+            //Acquirebutton.SetActive(true);
+            cardetail.text = carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().getCarname() +": $"+ carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().price.ToString();
  
+        }
+    }
+
+    /// <summary>
+    /// Toggles the aquire button to OFF if the user cant afford the car
+    /// Author: Maya Ashizumi-Munn
+    /// </summary>
+    private void CheckIfCanAfford()
+    {
+        int carPrice = carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().price;
+        int userBalance = PlayerPrefs.GetInt("CurrentUserCoins");
+        if (carPrice > userBalance)
+        {
+            //Make button unavailable
+            Acquirebutton.GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            //Can afford, make available
+            Acquirebutton.GetComponent<Button>().interactable = true;
         }
     }
 }
