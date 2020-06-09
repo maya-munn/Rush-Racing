@@ -68,3 +68,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Rush Racing/Library/ArtifactDB
+Rush Racing/Library/CurrentLayout-default.dwlt
+Rush Racing/Library/SourceAssetDB
+Rush Racing/Library/SourceAssetDB-lock
