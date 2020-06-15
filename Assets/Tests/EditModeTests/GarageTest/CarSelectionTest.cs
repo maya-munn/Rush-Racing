@@ -12,15 +12,11 @@ namespace Tests
         public void Save_Selected_to_PlayerPrefs()
         {
             //Arrange
-
-
+            
             //Action
             
             //Assert
           
         }
-
-  
-       
     }
 }
