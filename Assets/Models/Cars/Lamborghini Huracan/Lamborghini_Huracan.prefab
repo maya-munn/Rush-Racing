@@ -1097,7 +1097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 1200
-  car_name: Greeennn
+  car_name: Green
 --- !u!1 &7623996682674363734
 GameObject:
   m_ObjectHideFlags: 0

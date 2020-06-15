@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+///(Update) Bernadette Cruz: Changed playerprefs currency to "CurrentCoins" which displays current profile's coins. 
 public class AwakeManager : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -17,9 +18,9 @@ public class AwakeManager : MonoBehaviour
 
     private void Awake()
     {
-        PlayerPrefs.SetInt("currency", 20000);
+        ///PlayerPrefs.SetInt("currency", 20000);
         pointer_car = PlayerPrefs.GetInt("pointer");
-        currency.text = "$" + PlayerPrefs.GetInt("currency").ToString("");
+        currency.text = "$" + PlayerPrefs.GetInt("CurrentCoins").ToString("");
 
         GameObject childObject = Instantiate(carlist.car[pointer_car], Vector3.zero, Quaternion.identity) as GameObject;
         childObject.tag = "player";
@@ -55,15 +56,15 @@ public class AwakeManager : MonoBehaviour
     public void AcquireCar()
     {
        
-        if (PlayerPrefs.GetInt("currency") >= carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().price) {
+        if (PlayerPrefs.GetInt("CurrentCoins") >= carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().price) {
 
             PlayerPrefs.SetString(carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().getCarname(),
                                     carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().getCarname());
-            PlayerPrefs.SetInt("currency", PlayerPrefs.GetInt("currency") - carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().price);
-            Debug.Log(PlayerPrefs.GetInt("currency").ToString());
+            PlayerPrefs.SetInt("CurrentCoins", PlayerPrefs.GetInt("CurrentCoins") - carlist.car[PlayerPrefs.GetInt("pointer")].GetComponent<CarDetail>().price);
+            Debug.Log(PlayerPrefs.GetInt("CurrentCoins").ToString());
         }
         GetCarDetail();
-        currency.text = "$" + PlayerPrefs.GetInt("currency").ToString("");
+        currency.text = "$" + PlayerPrefs.GetInt("CurrentCoins").ToString("");
     }
     public void GetCarDetail()
     {

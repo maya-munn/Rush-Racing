@@ -7,6 +7,7 @@ using UnityEngine.UI;
 //This code was inspired by the code from Jimmy Vegas' Unity Racing Game tutorial. Assets 'GetReady' and 'GoAudio' were used from his website, as placeholders right now. As development continues, we would likely use or create our own assets.
 //Update (Bernadette Cruz): added disable car controls during countdown, which is enabled after countdown finishes.
 //Update (Maya Ashizumi-Mun): added royalty-free music during the race
+//Update (Bernadette Cruz): added component that modifies number of total laps which the player has chosen.
 public class Countdown : MonoBehaviour
 {
     //Connects to the GameObjects and audio files in the coundown animation
@@ -16,11 +17,13 @@ public class Countdown : MonoBehaviour
     public AudioSource MusicTrack;
     public GameObject LapTimer;
     public GameObject TotalLapTimer;
+    public GameObject TotalLaps;
     public GameObject CarController;
 
     //On start, calls the animation
     void Start()
-    {        
+    {
+        TotalLaps.GetComponent<Text>().text = "/ " + PlayerPrefs.GetInt("Laps");
         StartCoroutine(CountStart());
     }
 
