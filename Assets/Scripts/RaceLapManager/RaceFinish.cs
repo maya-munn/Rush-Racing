@@ -33,6 +33,7 @@ public class RaceFinish : MonoBehaviour
         MilliStats.GetComponent<Text>().text = TotalLapMilli.GetComponent<Text>().text;
      
         gameObject.AddComponent<CurrencyTable>().AddToUserCurrency(500);
+        PlayerPrefs.SetInt("CurrentCoins", gameObject.GetComponent<CurrencyTable>().GetUserCurrency());
 
         //update(Bernie) Outputs cash earned to Stats panel ---> hardcoded to $500 for now
         CashEarned.GetComponent<Text>().text = "+$500";

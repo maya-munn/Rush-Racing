@@ -12,14 +12,14 @@ using TMPro;
 public class UserCoins : MonoBehaviour
 {
     public GameObject Coins;
-    void Start()
+    void Update()
     {
         //Checks if a current profile is selected
         bool userExists = checkUserProfileExists();
         if (userExists)
         {
             //Gets value of current profile coins set in script "SwitchProfile"
-            Coins.GetComponent<TextMeshProUGUI>().text = "$" + PlayerPrefs.GetInt("CurrentCoins");
+            Coins.GetComponent<TextMeshProUGUI>().text = "$" + gameObject.AddComponent<CurrencyTable>().GetUserCurrency();
         }
         else
         {

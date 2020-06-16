@@ -345,7 +345,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82905577}
-  m_LocalRotation: {x: -0.10851004, y: -0.77247447, z: 0.13731085, w: -0.6104543}
+  m_LocalRotation: {x: -0.10851003, y: -0.77247465, z: 0.13731088, w: -0.61045426}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -640,7 +640,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: e77650238f935e4438b4c1f375b2b9fc,
         type: 3}
       propertyPath: m_Name
-      value: LamborghiniHuracan
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: e77650238f935e4438b4c1f375b2b9fc,
         type: 3}
@@ -1244,7 +1244,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562389347}
-  m_LocalRotation: {x: -0.08626369, y: -0.77695256, z: 0.10916016, w: -0.613993}
+  m_LocalRotation: {x: -0.086263694, y: -0.77695245, z: 0.109160155, w: -0.6139931}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1270,7 +1270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7495b581e1caec42958421b6a4157ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CarName: Yello
+  CarName: Yellow
   CarPrice: 12000
 --- !u!1 &690936172
 GameObject:
