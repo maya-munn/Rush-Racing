@@ -15,6 +15,7 @@ public class CarAIPathFinder : MonoBehaviour
     public WheelCollider wheelBL;
     public WheelCollider wheelBR;
     public float carStrength = 150f;
+    public GameObject PlayerCarControls;
 
     //Gets all the waypoints from the CarPathAI script.
     void Start()
@@ -29,14 +30,17 @@ public class CarAIPathFinder : MonoBehaviour
         }
     }
 
+    //The AI car will only activate once the player's car (Car Controls are called in as a game object) is ready to drive after the countdown ends.
     void FixedUpdate(){
-        CarSteer();
-        CarDrive();
-        CarNavigation();
+        if(PlayerCarControls.activeSelf == true){
+            CarSteer();
+            CarDrive();
+            CarNavigation();
+        } 
     }
 
     //Allows the car to turn/rotate according to the vector of the next waypoint.
-    private void CarSteer(){
+    void CarSteer(){
         Vector3 travelVect = transform.InverseTransformPoint(pathPoints[currentPoint].position);
         travelVect = travelVect / travelVect.magnitude;
         float newSteer = (travelVect.x / travelVect.magnitude)* maxSteerAngle;
@@ -53,8 +57,6 @@ public class CarAIPathFinder : MonoBehaviour
         wheelFR.motorTorque = carStrength * 2;
         wheelBL.motorTorque = carStrength * 2;  
         wheelBR.motorTorque = carStrength * 2;
-
-    
     }
 
     //Makes the car follow the next waypoint once it has gotten near the first one.

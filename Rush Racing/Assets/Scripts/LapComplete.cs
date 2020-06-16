@@ -28,7 +28,7 @@ public class LapComplete : MonoBehaviour
 
     //Will set the status of RaceFinish to true, which will unlock the last checkpoint which will throw up the scoreboard.
     public void Update(){
-    if (LapsDone == 4){
+    if (LapsDone == 0){
         RaceFinish.SetActive(true);
     }
     }

@@ -814,7 +814,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TestData
+  m_Text: player6
 --- !u!222 &48747668
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2158,7 +2158,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: abc123
+  m_Text: player2
 --- !u!222 &174274495
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3585,6 +3585,7 @@ MonoBehaviour:
   LapTimer: {fileID: 1878483474}
   TotalLapTimer: {fileID: 1594187350}
   CarController: {fileID: 352879968}
+  CarPathAI: {fileID: 0}
 --- !u!4 &388561253
 Transform:
   m_ObjectHideFlags: 0
@@ -3827,7 +3828,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: AbsoluteLoser
+  m_Text: player9
 --- !u!222 &423404507
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6401,7 +6402,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: newplayer.2005
+  m_Text: player5
 --- !u!222 &688348139
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7574,7 +7575,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Jacinda Ardern
+  m_Text: player3
 --- !u!222 &801367648
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11261,7 +11262,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: skrrrrrrrrt
+  m_Text: player4
 --- !u!222 &1163496116
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13902,7 +13903,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SeventhPlacePerson
+  m_Text: player7
 --- !u!222 &1428389620
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15121,7 +15122,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: wowineedtogetbetter
+  m_Text: player9
 --- !u!222 &1537763780
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15605,7 +15606,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578592117}
   m_LocalRotation: {x: -0, y: -0.73782015, z: -0, w: 0.6749974}
-  m_LocalPosition: {x: 16.12, y: -2.473, z: -57.626}
+  m_LocalPosition: {x: 15.43, y: -2.473, z: -57.69}
   m_LocalScale: {x: 0.052653015, y: 0.052653015, z: 0.052653015}
   m_Children:
   - {fileID: 1893526850}
@@ -15651,6 +15652,7 @@ MonoBehaviour:
   wheelBL: {fileID: 1525425997}
   wheelBR: {fileID: 1028388947}
   carStrength: 20000
+  PlayerCarControls: {fileID: 352879968}
 --- !u!1001 &1583939874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20743,7 +20745,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: EightBall
+  m_Text: player8
 --- !u!222 &2120537757
 CanvasRenderer:
   m_ObjectHideFlags: 0

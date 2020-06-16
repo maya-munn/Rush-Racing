@@ -17,6 +17,7 @@ public class Countdown : MonoBehaviour
     public GameObject LapTimer;
     public GameObject TotalLapTimer;
     public GameObject CarController;
+    public GameObject CarPathAI;
 
     //On start, calls the animation
     void Start()

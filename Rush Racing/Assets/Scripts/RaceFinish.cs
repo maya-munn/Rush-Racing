@@ -16,5 +16,6 @@ public class RaceFinish : MonoBehaviour
     {
         StatsPanel.SetActive(true);
         gameObject.AddComponent<CurrencyTable>().AddToUserCurrency(500);
+        
     }
 }
