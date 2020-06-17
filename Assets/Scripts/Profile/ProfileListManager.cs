@@ -5,6 +5,7 @@ using UnityEngine.UI;
 /// <summary>
 /// Author: Maya Ashizumi-Munn
 /// </summary>
+/// 
 public class ProfileListManager : MonoBehaviour
 {
     public GameObject userOnePlayButton;

@@ -83,6 +83,7 @@ public class CurrencyTable : MonoBehaviour
 		}
 	}
 
+
 	public void RemoveFromUserCurrency(int amountToRemove)
 	{
 		int currentUserID = PlayerPrefs.GetInt("CurrentUserID");

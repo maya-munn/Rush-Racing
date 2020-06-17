@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 //Author: Immanuel Siregar
 //Inspired from Jimmy Vegas' Unity Tutorial
+//(Update) Bernadette Cruz: Modified laps done to number of laps chosen by player
 
 public class LapComplete : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class LapComplete : MonoBehaviour
 
     //Will set the status of RaceFinish to true, which will unlock the last checkpoint which will throw up the scoreboard.
     public void Update(){
-    if (LapsDone == 0){
+    if (LapsDone == PlayerPrefs.GetInt("Laps")){
         RaceFinish.SetActive(true);
     }
     }

@@ -23,7 +23,6 @@ public class CarSelection : MonoBehaviour
     //Display current chosen car
     private void Start()
     {
-        PlayerPrefs.SetInt("currency", 30000);
         carList = new GameObject[transform.childCount];
         index = PlayerPrefs.GetInt("CarSelected",0);
         
@@ -48,7 +47,7 @@ public class CarSelection : MonoBehaviour
     {
         DisplayCarStats();
         DisplayButtonAcquire();
-        currency.text = "$" + PlayerPrefs.GetInt("currency", 0).ToString();
+        currency.text = "$" + PlayerPrefs.GetInt("CurrentCoins", 0).ToString();
     }
 
     public void ChangeCarOnClick(bool isLeft)
@@ -107,7 +106,7 @@ public class CarSelection : MonoBehaviour
         {
             if (!canBuy())
             {
-                AcquireButton.GetComponentInChildren<TextMeshProUGUI>().text = "Sufficient money";
+                AcquireButton.GetComponentInChildren<TextMeshProUGUI>().text = "Insufficient money";
                 AcquireButton.interactable = false;
             }
             else
@@ -123,12 +122,14 @@ public class CarSelection : MonoBehaviour
         if (canBuy())
         {
             PlayerPrefs.SetInt(carList[index].GetComponent<CarStats>().CarName, 1);
-            PlayerPrefs.SetInt("currency", PlayerPrefs.GetInt("currency", 0) - carList[index].GetComponent<CarStats>().CarPrice);
+            gameObject.AddComponent<CurrencyTable>().RemoveFromUserCurrency(carList[index].GetComponent<CarStats>().CarPrice);
+
+            PlayerPrefs.SetInt("CurrentCoins", gameObject.GetComponent<CurrencyTable>().GetUserCurrency()); 
         }
     }
 
     public bool canBuy()
     {
-        return PlayerPrefs.GetInt("currency", 0) >= carList[index].GetComponent<CarStats>().CarPrice;
+        return PlayerPrefs.GetInt("CurrentCoins", 0) >= carList[index].GetComponent<CarStats>().CarPrice;
     }
 }

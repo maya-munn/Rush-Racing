@@ -4,9 +4,10 @@ using UnityEngine;
 
 
 public class CarControlActive : MonoBehaviour
-{   public GameObject Car;
+{   
+     public GameObject Car;
     // Start is called before the first frame update
-    void Start()
+    void Start() 
     {
         Car.GetComponent<CarController>().enabled = true;
     }
