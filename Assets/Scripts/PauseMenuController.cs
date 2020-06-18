@@ -1,7 +1,8 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class PauseMenuController : MonoBehaviour
 {
@@ -26,12 +27,13 @@ public class PauseMenuController : MonoBehaviour
 
     public void Quit()
     {
+        Time.timeScale = 1; 
         SceneManager.LoadScene((int)Menuscene.MainMenu);
-        SceneManager.LoadScene(0);
     }
 
     private enum Menuscene
     {
+        RaceScene1 = 1, 
         MainMenu = 0,
         Restart = 4
 
@@ -41,7 +43,7 @@ public class PauseMenuController : MonoBehaviour
     {
         Pausedmenu.SetActive(false);
         SettingsMenu.SetActive(false);
-        SceneManager.LoadScene((int)Menuscene.Restart);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
     }
 
