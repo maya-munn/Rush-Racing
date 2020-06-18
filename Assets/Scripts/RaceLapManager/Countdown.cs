@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 //Author: Immanuel Siregar
@@ -32,8 +33,6 @@ public class Countdown : MonoBehaviour
     IEnumerator CountStart()
     {
         yield return new WaitForSeconds(0.5f);
-        
-
         CountDown.GetComponent<Text>().text = "3";
         GetReady.Play();
         CountDown.SetActive(true);
