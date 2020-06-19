@@ -21,10 +21,16 @@ public class CarSelection : MonoBehaviour
 
 
     //Display current chosen car
+    private void Awake()
+    {
+        PlayerPrefs.SetInt("CurrentCoins", 30000);
+        carList = new GameObject[transform.childCount];
+        index = PlayerPrefs.GetInt("CarSelected", 0);
+    }
     private void Start()
     {
-        carList = new GameObject[transform.childCount];
-        index = PlayerPrefs.GetInt("CarSelected",0);
+        
+        
         
         //Fill the arrays with models
         for(int i = 0; i < transform.childCount; i++)
@@ -47,7 +53,7 @@ public class CarSelection : MonoBehaviour
     {
         DisplayCarStats();
         DisplayButtonAcquire();
-        currency.text = "$" + PlayerPrefs.GetInt("CurrentCoins", 0).ToString();
+        currency.text = "$" + PlayerPrefs.GetInt("CurrentCoins").ToString();
     }
 
     public void ChangeCarOnClick(bool isLeft)
@@ -130,6 +136,6 @@ public class CarSelection : MonoBehaviour
 
     public bool canBuy()
     {
-        return PlayerPrefs.GetInt("CurrentCoins", 0) >= carList[index].GetComponent<CarStats>().CarPrice;
+        return PlayerPrefs.GetInt("CurrentCoins") >= carList[index].GetComponent<CarStats>().CarPrice;
     }
 }

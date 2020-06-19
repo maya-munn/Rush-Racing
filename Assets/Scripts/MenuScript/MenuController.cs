@@ -14,14 +14,15 @@ public class MenuController : MonoBehaviour
 {
     private enum SceneIndex
     {
-        MainMenu = 0,
-        FreePlay = 1,
-        Tournament = 2,
-        Garage = 3,
-        RaceScene = 4,
-        ProfileCreation = 5,
-        ProfileList = 6,
-        Options = 7
+        PreLoader = 0,
+        MainMenu = 1,
+        FreePlay = 2,
+        Tournament = 3,
+        Garage = 4,
+        RaceScene = 5,
+        ProfileCreation = 6,
+        ProfileList = 7,
+        Options = 8
     }
 
     //**************************//
