@@ -100,9 +100,11 @@
     <Compile Include="Assets\SpawnCar.cs" />
     <Compile Include="Assets\VolumeTest\SetVolume.cs" />
     <Compile Include="Assets\VolumeTest\ToggleVolume.cs" />
+    <None Include="Assets\DesertTrackAssets\Free Low Poly Desert Pack\Materials\Shaders\Vertex_Color_Unlit.shader" />
     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\DesertTrackAssets\Free Low Poly Desert Pack\Materials\Shaders\Vertex_Color_Basic.shader" />
     <None Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
@@ -115,6 +117,7 @@
     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Models\LowPolyTreePack\README.txt" />
     <None Include="Assets\Plugins\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\DesertTrackAssets\Ground materials FD\Information package.txt" />
     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\GameAssembly.asmdef" />

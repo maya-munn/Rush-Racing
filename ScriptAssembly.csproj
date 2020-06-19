@@ -102,6 +102,7 @@
     <Compile Include="Assets\Scripts\RaceLapManager\SpeedoManager.cs" />
     <Compile Include="Assets\Scripts\RaceLapManager\TotalLapTime.cs" />
     <Compile Include="Assets\Scripts\SettingsMenu.cs" />
+    <Compile Include="Assets\Scripts\TournamentMode.cs" />
     <None Include="Assets\Scripts\ScriptAssembly.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/2019.4.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
