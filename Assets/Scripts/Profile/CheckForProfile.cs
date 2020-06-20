@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 public class CheckForProfile : MonoBehaviour
 {
     //Change this if main menu index has changed
-    private int createProfileSceneIndex = 6;
+    private int createProfileSceneIndex = 5;
 
     /// <summary>
     /// Called from Play button, takes user to create profile scene if there is no user profile

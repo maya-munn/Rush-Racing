@@ -541,6 +541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CarName: Ferrari Enzo
   CarPrice: 20000
+  material: {fileID: 2100000, guid: d7f6abf76d9b3cf4dbf70ad9d77bf3b7, type: 2}
 --- !u!1 &3423463177780301795
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,7 +1035,7 @@ GameObject:
   - component: {fileID: 1732474954390282853}
   - component: {fileID: 6799882795263124582}
   m_Layer: 0
-  m_Name: Ferrari Enzo.003
+  m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -7,6 +7,7 @@ public class CarStats : MonoBehaviour
 {
     public String CarName;
     public int CarPrice;
+    public Material material;
 
     //other Stats
 

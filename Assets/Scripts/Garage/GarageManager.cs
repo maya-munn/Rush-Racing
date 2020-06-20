@@ -18,7 +18,12 @@ public class GarageManager : MonoBehaviour
     //Field for displaying Car Stats
     public TextMeshProUGUI CarName;
     public TextMeshProUGUI CarPrice;
-    
+
+    //Colors Modification
+    public Transform colorPanel;
+    public Color[] carColors = new Color[5];
+
+    public Button ColorApplyButton;
 
     //Display current chosen car
     private void Awake()
@@ -26,12 +31,47 @@ public class GarageManager : MonoBehaviour
         PlayerPrefs.SetInt("CurrentCoins", 30000);
         index = PlayerPrefs.GetInt("CarSelected", 0);
         carList = Player.GetComponent<SpawnCar>().carList;
+        InitColorPanel();
     }
     private void OnGUI()
     {
         DisplayCarStats();
         DisplayButtonAcquire();
         currency.text = "$ " + PlayerPrefs.GetInt("CurrentCoins", 0).ToString();
+    }
+    //
+    //need add button on click to show shop
+    private void InitColorPanel()
+    {
+        if(colorPanel == null)
+        {
+            Debug.Log("Please asign the color panel in the inspector.");
+        }
+        //change color for all children in color panel
+        int i = 0;
+        foreach (Transform color in colorPanel)
+        {
+            int currentIndex = i;
+            Button colorButton = color.GetComponent<Button>();
+            colorButton.onClick.AddListener(() => OnColorSelect(currentIndex));
+
+            //Set Color of the image
+            Image ColorImg = colorButton.GetComponent<Image>();
+            ColorImg.color = carColors[currentIndex];
+
+            i++;
+        }
+        //Reset index
+        i = 0;
+    }
+
+    public void OnColorSelect(int currentIndex)
+    {
+        carList[index].GetComponent<CarStats>().material.SetColor("_Color",carColors[currentIndex]);
+    }
+    public void onColorApply()
+    {
+        Debug.Log("Buy Color");
     }
 
     public void ChangeCarOnClick(bool isLeft)

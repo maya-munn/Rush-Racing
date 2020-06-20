@@ -71,7 +71,6 @@
     <Compile Include="Assets\Scripts\DBImport.cs" />
     <Compile Include="Assets\Scripts\Database\CurrencyTable.cs" />
     <Compile Include="Assets\Scripts\Database\UserTable.cs" />
-    <Compile Include="Assets\Scripts\Garage\CarSelection.cs" />
     <Compile Include="Assets\Scripts\Garage\CarStats.cs" />
     <Compile Include="Assets\Scripts\Garage\GarageManager.cs" />
     <Compile Include="Assets\Scripts\Garage\SpawnCar.cs" />

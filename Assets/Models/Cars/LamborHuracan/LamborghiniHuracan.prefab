@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 2398317011446134566}
   - component: {fileID: 508802199360611377}
   m_Layer: 0
-  m_Name: LAMBORGHINI HURACAN body
+  m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -702,6 +702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CarName: Lamborghini Huracan
   CarPrice: 1000
+  material: {fileID: 2100000, guid: 9a9ec0d53c2f31941a6acb0860d67272, type: 2}
 --- !u!1 &7093083635361150010
 GameObject:
   m_ObjectHideFlags: 0
