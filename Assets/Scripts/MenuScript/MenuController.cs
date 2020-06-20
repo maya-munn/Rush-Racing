@@ -1,7 +1,4 @@
-﻿using JetBrains.Annotations;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /// <summary>
@@ -12,21 +9,22 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class MenuController : MonoBehaviour
 {
-    private enum SceneIndex
+    public enum SceneIndex
     {
         PreLoader = 0,
         MainMenu = 1,
         FreePlay = 2,
         Tournament = 3,
         Garage = 4,
-        RaceScene = 5,
-        ProfileCreation = 6,
-        ProfileList = 7,
-        Options = 8
+        ProfileCreation = 5,
+        ProfileList = 6,
+        Options = 7,
+        Track1 = 8,
+        Track2 = 9,
     }
 
     //**************************//
-
+    public GameObject MapSelected = default;
     public void MainMenu()
     {
         SceneManager.LoadScene((int)SceneIndex.MainMenu);
@@ -35,17 +33,24 @@ public class MenuController : MonoBehaviour
     public void FreePlayMode()
     {
         SceneManager.LoadScene((int)SceneIndex.FreePlay);
+
     }
 
-    public void ProfileList(){
+    public void ProfileList()
+    {
         SceneManager.LoadScene((int)SceneIndex.ProfileList);
     }
-    
+
+
     public void TournamentMode()
     {
         SceneManager.LoadScene((int)SceneIndex.Tournament);
     }
-
+    public void TournamentStart()
+    {
+        PlayerPrefs.SetInt("Tournament", 1);
+        SceneManager.LoadScene((int)MenuController.SceneIndex.Track1);
+    }
 
     public void GarageScene()
     {
@@ -60,12 +65,23 @@ public class MenuController : MonoBehaviour
 
     public void BackToMainMenu()
     {
+        PlayerPrefs.SetInt("Tournament", 0);
         this.MainMenu();
     }
+
     public void StartButton()
     {
-        SceneManager.LoadScene((int)SceneIndex.RaceScene);
+        if (MapSelected == null) return;
+        int map = MapSelected.GetComponent<HorizontalSelector>().index;
+
+        if (map == 0)
+            SceneManager.LoadScene((int)SceneIndex.Track1);
+
+        else if (map == 1)
+            SceneManager.LoadScene((int)SceneIndex.Track2);
     }
+
+
 
     public void CreateProfileMenu()
     {

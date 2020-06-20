@@ -21,9 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu/Garage.unity
     guid: 92f6380300c089e45a9501348064f299
   - enabled: 1
-    path: Assets/Scenes/Tracks/LamboTrack.unity
-    guid: ec641fd0c06ff43d387e96245fbf4f8d
-  - enabled: 1
     path: Assets/Scenes/Menu/ProfileCreation.unity
     guid: 9bc48ada0d0d7cf42ae02da0293ef274
   - enabled: 1
@@ -32,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu/Options menu.unity
     guid: c5cb928e4e6e59f459bd15b6a05abc58
+  - enabled: 1
+    path: Assets/Scenes/Tracks/LamboTrack.unity
+    guid: ec641fd0c06ff43d387e96245fbf4f8d
   - enabled: 1
     path: Assets/Scenes/Tracks/DesertTrack.unity
     guid: 24185e654a0c2b54dbbe581577d5368b
