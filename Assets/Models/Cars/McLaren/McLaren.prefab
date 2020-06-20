@@ -389,6 +389,10 @@ MonoBehaviour:
   CarName: Mc Laren
   CarPrice: 43000
   material: {fileID: 2100000, guid: 4f8bfcda9cccf9f4283cb1cbf08304b6, type: 2}
+  speed: 100
+  maxSpeed: 100
+  upgradeSpeed: 9
+  upgradeCost: 12000
 --- !u!1 &1732758227114118184
 GameObject:
   m_ObjectHideFlags: 0

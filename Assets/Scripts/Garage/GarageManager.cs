@@ -18,38 +18,69 @@ public class GarageManager : MonoBehaviour
     //Field for displaying Car Stats
     public TextMeshProUGUI CarName;
     public TextMeshProUGUI CarPrice;
+    public TextMeshProUGUI speed;
+    public TextMeshProUGUI upgradeCost;
+
 
     //Colors Modification
-    public Transform colorPanel;
+    public GameObject colorPanel;
     public Color[] carColors = new Color[5];
+    
 
-    public Button ColorApplyButton;
+    //Button upgrade
+    public GameObject showColor;
+    public GameObject showUpgrade;
 
+    public GameObject upgradePanel;
+    public Button upgradeSpeedButton;
     //Display current chosen car
     private void Awake()
     {
         PlayerPrefs.SetInt("CurrentCoins", 30000);
         index = PlayerPrefs.GetInt("CarSelected", 0);
         carList = Player.GetComponent<SpawnCar>().carList;
+        
         InitColorPanel();
+        InitSlider();
     }
     private void OnGUI()
     {
+        speed.text = carList[index].GetComponent<CarStats>().speed.ToString()
+            + "/" + carList[index].GetComponent<CarStats>().maxSpeed.ToString();
+        upgradeCost.text = "Upgrade cost: "
+            + carList[index].GetComponent<CarStats>().upgradeCost.ToString();
         DisplayCarStats();
         DisplayButtonAcquire();
         currency.text = "$ " + PlayerPrefs.GetInt("CurrentCoins", 0).ToString();
+
+        //disable upgrade and color if car havnt been bought
+        if(PlayerPrefs.GetInt(carList[index].GetComponent<CarStats>().CarName) == 0)
+        {
+            showColor.SetActive(false);
+            showUpgrade.SetActive(false);
+        }
+        else {
+            showColor.SetActive(true);
+            showUpgrade.SetActive(true);
+        }
+        //disable upgrade speed button if dont have enough  money to upgrade
+        if (PlayerPrefs.GetInt("CurrentCoins", 0) < carList[index].GetComponent<CarStats>().upgradeCost)
+        {
+            upgradeSpeedButton.interactable = false;
+        }
+        else upgradeSpeedButton.interactable = true;
     }
     //
     //need add button on click to show shop
     private void InitColorPanel()
     {
-        if(colorPanel == null)
+        if(colorPanel.transform == null)
         {
             Debug.Log("Please asign the color panel in the inspector.");
         }
         //change color for all children in color panel
         int i = 0;
-        foreach (Transform color in colorPanel)
+        foreach (Transform color in colorPanel.transform)
         {
             int currentIndex = i;
             Button colorButton = color.GetComponent<Button>();
@@ -64,15 +95,59 @@ public class GarageManager : MonoBehaviour
         //Reset index
         i = 0;
     }
-
+    //Change Car Color
     public void OnColorSelect(int currentIndex)
     {
         carList[index].GetComponent<CarStats>().material.SetColor("_Color",carColors[currentIndex]);
     }
-    public void onColorApply()
+    //Show color panel while mouse enter color button
+    public void onColorEnter(bool isEnter)
     {
-        Debug.Log("Buy Color");
+        if (isEnter)
+        {
+            colorPanel.SetActive(true);
+        }
+        else colorPanel.SetActive(false);
     }
+    //Show Upgrade panel while mouse enter upgrade button
+    public void onUpgradeEnter(bool isEnter)
+    {
+        if (isEnter)
+        {
+            upgradePanel.SetActive(true);
+        }
+        else upgradePanel.SetActive(false);
+    }
+
+    //Stats Bar
+
+    public Slider speedSlider;
+    public void InitSlider()
+    {
+        speedSlider.maxValue = carList[index].GetComponent<CarStats>().maxSpeed;
+        speedSlider.value = carList[index].GetComponent<CarStats>().speed;
+        Debug.Log("Slider init");
+    }
+    public void upgradeSpeed()
+    {
+        //Set speed = max speed if upgrade exceed max speed
+        if ((carList[index].GetComponent<CarStats>().speed
+            + carList[index].GetComponent<CarStats>().upgradeSpeed)
+            >= carList[index].GetComponent<CarStats>().maxSpeed)
+        {
+            carList[index].GetComponent<CarStats>().speed = carList[index].GetComponent<CarStats>().maxSpeed;
+            speedSlider.value = carList[index].GetComponent<CarStats>().maxSpeed;
+        }
+        else {
+            speedSlider.value += carList[index].GetComponent<CarStats>().upgradeSpeed;
+            carList[index].GetComponent<CarStats>().speed += carList[index].GetComponent<CarStats>().upgradeSpeed;
+        }
+        PlayerPrefs.SetInt("CurrentCoins", PlayerPrefs.GetInt("CurrentCoins")-carList[index].GetComponent<CarStats>().upgradeCost);
+    }
+
+
+
+
 
     public void ChangeCarOnClick(bool isLeft)
     {
@@ -97,8 +172,9 @@ public class GarageManager : MonoBehaviour
             }
         }
        //Instantiate new model
-        Instantiate(carList[index], Player.transform.position, Player.transform.rotation);
-
+       GameObject Car= Instantiate(carList[index], Player.transform.position, Player.transform.rotation);
+        Car.transform.parent = Player.transform;
+        InitSlider();
     }
 
     //Save Selected to PlayerPrefs for using in Play Mode
@@ -111,7 +187,15 @@ public class GarageManager : MonoBehaviour
     public void DisplayCarStats()
     {
         CarName.SetText(carList[index].GetComponent<CarStats>().CarName);
-        CarPrice.SetText("$ " + carList[index].GetComponent<CarStats>().CarPrice.ToString());
+        //Display car price if it havent bought
+        if (PlayerPrefs.GetInt(carList[index].GetComponent<CarStats>().CarName) == 0)
+        {
+            CarPrice.SetText("$ " + carList[index].GetComponent<CarStats>().CarPrice.ToString());
+        }
+        else
+        {
+            CarPrice.SetText("Owned");
+        }
     }
 
     public void DisplayButtonAcquire()

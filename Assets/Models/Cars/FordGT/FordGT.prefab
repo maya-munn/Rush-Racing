@@ -1027,3 +1027,7 @@ MonoBehaviour:
   CarName: Ford GT
   CarPrice: 15000
   material: {fileID: 2100000, guid: 9e1aea90779a0d242b3d7a6e22856837, type: 2}
+  speed: 12
+  maxSpeed: 70
+  upgradeSpeed: 7
+  upgradeCost: 7000

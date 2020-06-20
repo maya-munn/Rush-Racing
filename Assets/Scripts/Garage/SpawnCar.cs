@@ -7,6 +7,7 @@ public class SpawnCar : MonoBehaviour
     public GameObject[] carList;
     private void Awake()
     {
-        Instantiate(carList[PlayerPrefs.GetInt("CarSelected")], this.transform.position, this.transform.rotation);
+        GameObject Player=Instantiate(carList[PlayerPrefs.GetInt("CarSelected")], this.transform.position, this.transform.rotation);
+        Player.transform.parent = gameObject.transform;
     }
 }

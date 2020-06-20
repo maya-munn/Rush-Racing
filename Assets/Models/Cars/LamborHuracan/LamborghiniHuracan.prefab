@@ -703,6 +703,10 @@ MonoBehaviour:
   CarName: Lamborghini Huracan
   CarPrice: 1000
   material: {fileID: 2100000, guid: 9a9ec0d53c2f31941a6acb0860d67272, type: 2}
+  speed: 8
+  maxSpeed: 40
+  upgradeSpeed: 5
+  upgradeCost: 2000
 --- !u!1 &7093083635361150010
 GameObject:
   m_ObjectHideFlags: 0

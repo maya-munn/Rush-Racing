@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4126820986743288547}
   - component: {fileID: 773342506417957941}
   m_Layer: 0
-  m_Name: Ferrari Enzo.010
+  m_Name: FLWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   m_LocalScale: {x: 15.363839, y: 15.363839, z: 15.363839}
   m_Children: []
   m_Father: {fileID: 2573291513065492951}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4126820986743288547
 MeshFilter:
@@ -190,7 +190,7 @@ Transform:
   m_LocalScale: {x: 0.63229984, y: 0.63229984, z: 0.63229984}
   m_Children: []
   m_Father: {fileID: 2573291513065492951}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6308316888756997601
 MeshFilter:
@@ -429,7 +429,7 @@ Transform:
   m_LocalScale: {x: 0.63229984, y: 0.63229984, z: 0.63229984}
   m_Children: []
   m_Father: {fileID: 2573291513065492951}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &189508943197801335
 MeshFilter:
@@ -512,7 +512,6 @@ Transform:
   - {fileID: 1353463890163418557}
   - {fileID: 7731749274379248256}
   - {fileID: 1235004283826166499}
-  - {fileID: 3252727602224328662}
   - {fileID: 5332490459668702640}
   - {fileID: 5853381486861454154}
   - {fileID: 4883641772645468823}
@@ -520,6 +519,7 @@ Transform:
   - {fileID: 4472714419641328530}
   - {fileID: 2213632398944901744}
   - {fileID: 3953203593668325752}
+  - {fileID: 3252727602224328662}
   - {fileID: 3250802030141117196}
   - {fileID: 4497270164427690719}
   - {fileID: 2128812863551781199}
@@ -542,6 +542,10 @@ MonoBehaviour:
   CarName: Ferrari Enzo
   CarPrice: 20000
   material: {fileID: 2100000, guid: d7f6abf76d9b3cf4dbf70ad9d77bf3b7, type: 2}
+  speed: 35
+  maxSpeed: 70
+  upgradeSpeed: 5
+  upgradeCost: 8000
 --- !u!1 &3423463177780301795
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,7 +576,7 @@ Transform:
   m_LocalScale: {x: 0.63229984, y: 0.63229984, z: 0.63229984}
   m_Children: []
   m_Father: {fileID: 2573291513065492951}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2863283317228175935
 MeshFilter:
@@ -653,7 +657,7 @@ Transform:
   m_LocalScale: {x: 0.63229984, y: 0.63229984, z: 0.63229984}
   m_Children: []
   m_Father: {fileID: 2573291513065492951}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1063343100793677263
 MeshFilter:
@@ -1114,7 +1118,7 @@ GameObject:
   - component: {fileID: 8387556807807008124}
   - component: {fileID: 4122786155416144664}
   m_Layer: 0
-  m_Name: Ferrari Enzo.004
+  m_Name: BLWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1132,7 +1136,7 @@ Transform:
   m_LocalScale: {x: 17.001148, y: 17.001148, z: 17.001148}
   m_Children: []
   m_Father: {fileID: 2573291513065492951}
-  m_RootOrder: 4
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8387556807807008124
 MeshFilter:
@@ -1195,7 +1199,7 @@ GameObject:
   - component: {fileID: 4495708985038584857}
   - component: {fileID: 961193259418630186}
   m_Layer: 0
-  m_Name: Ferrari Enzo.009
+  m_Name: FRWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1213,7 +1217,7 @@ Transform:
   m_LocalScale: {x: 15.363839, y: 15.363839, z: 15.363839}
   m_Children: []
   m_Father: {fileID: 2573291513065492951}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4495708985038584857
 MeshFilter:
@@ -1276,7 +1280,7 @@ GameObject:
   - component: {fileID: 8200330049116106037}
   - component: {fileID: 1125739032639699443}
   m_Layer: 0
-  m_Name: Ferrari Enzo.011
+  m_Name: BRWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1294,7 +1298,7 @@ Transform:
   m_LocalScale: {x: 17.001148, y: 17.001148, z: 17.001148}
   m_Children: []
   m_Father: {fileID: 2573291513065492951}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8200330049116106037
 MeshFilter:

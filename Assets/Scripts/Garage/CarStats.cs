@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CarStats : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class CarStats : MonoBehaviour
     public int CarPrice;
     public Material material;
 
-    //other Stats
-
+    public int speed;
+    public int maxSpeed;
+    public int upgradeSpeed;
+    public int upgradeCost;
 }
