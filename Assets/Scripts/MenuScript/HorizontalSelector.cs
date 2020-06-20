@@ -9,13 +9,13 @@ using Object = UnityEngine.Object;
 public class HorizontalSelector : MonoBehaviour
 {
 
-    private TextMeshProUGUI text;
-    private RawImage image;
+    public TextMeshProUGUI text;
+    public RawImage image;
 
-    private Object defaultobject;
-    private List<Object> defaultList = new List<Object>();
+    public Object defaultobject;
+    public List<Object> defaultList = new List<Object>();
 
-    private int index = 0;
+    public int index = 0;
 
 
     [Serializable]
