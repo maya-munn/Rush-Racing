@@ -36,7 +36,6 @@ public class GarageManager : MonoBehaviour
     //Display current chosen car
     private void Awake()
     {
-        PlayerPrefs.SetInt("CurrentCoins", 30000);
         index = PlayerPrefs.GetInt("CarSelected", 0);
         carList = Player.GetComponent<SpawnCar>().carList;
         
@@ -51,7 +50,7 @@ public class GarageManager : MonoBehaviour
             + carList[index].GetComponent<CarStats>().upgradeCost.ToString();
         DisplayCarStats();
         DisplayButtonAcquire();
-        currency.text = "$ " + PlayerPrefs.GetInt("CurrentCoins", 0).ToString();
+        currency.text = "$ " + PlayerPrefs.GetInt("CurrentUserCoins", 0).ToString();
 
         //disable upgrade and color if car havnt been bought
         if(PlayerPrefs.GetInt(carList[index].GetComponent<CarStats>().CarName) == 0)
@@ -64,7 +63,7 @@ public class GarageManager : MonoBehaviour
             showUpgrade.SetActive(true);
         }
         //disable upgrade speed button if dont have enough  money to upgrade
-        if (PlayerPrefs.GetInt("CurrentCoins", 0) < carList[index].GetComponent<CarStats>().upgradeCost)
+        if (PlayerPrefs.GetInt("CurrentUserCoins", 0) < carList[index].GetComponent<CarStats>().upgradeCost)
         {
             upgradeSpeedButton.interactable = false;
         }
@@ -142,7 +141,7 @@ public class GarageManager : MonoBehaviour
             speedSlider.value += carList[index].GetComponent<CarStats>().upgradeSpeed;
             carList[index].GetComponent<CarStats>().speed += carList[index].GetComponent<CarStats>().upgradeSpeed;
         }
-        PlayerPrefs.SetInt("CurrentCoins", PlayerPrefs.GetInt("CurrentCoins")-carList[index].GetComponent<CarStats>().upgradeCost);
+        PlayerPrefs.SetInt("CurrentUserCoins", PlayerPrefs.GetInt("CurrentUserCoins") -carList[index].GetComponent<CarStats>().upgradeCost);
     }
 
 
@@ -233,12 +232,12 @@ public class GarageManager : MonoBehaviour
             PlayerPrefs.SetInt(carList[index].GetComponent<CarStats>().CarName, 1);
             gameObject.AddComponent<CurrencyTable>().RemoveFromUserCurrency(carList[index].GetComponent<CarStats>().CarPrice);
 
-            PlayerPrefs.SetInt("CurrentCoins", PlayerPrefs.GetInt("CurrentCoins", 0) - carList[index].GetComponent<CarStats>().CarPrice);
+            PlayerPrefs.SetInt("CurrentUserCoins", PlayerPrefs.GetInt("CurrentUserCoins", 0) - carList[index].GetComponent<CarStats>().CarPrice);
         }
     }
 
     public bool canBuy()
     {
-        return PlayerPrefs.GetInt("CurrentCoins", 0) >= carList[index].GetComponent<CarStats>().CarPrice;
+        return PlayerPrefs.GetInt("CurrentUserCoins", 0) >= carList[index].GetComponent<CarStats>().CarPrice;
     }
 }
