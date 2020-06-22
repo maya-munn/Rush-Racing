@@ -711,6 +711,11 @@ PrefabInstance:
       propertyPath: RR
       value: 
       objectReference: {fileID: 1493410498}
+    - target: {fileID: 3011191661834387234, guid: 83bce934877671d428bf97b8f3d175b8,
+        type: 3}
+      propertyPath: carController
+      value: 
+      objectReference: {fileID: 1493410498}
     - target: {fileID: 3011191661834387235, guid: 83bce934877671d428bf97b8f3d175b8,
         type: 3}
       propertyPath: m_Name
@@ -1366,7 +1371,7 @@ PrefabInstance:
     - target: {fileID: 2012199213003721231, guid: e2b53982955a3554ca4b07b0f046bf40,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 72.63
+      value: 72.62988
       objectReference: {fileID: 0}
     - target: {fileID: 2012199213003721231, guid: e2b53982955a3554ca4b07b0f046bf40,
         type: 3}
@@ -4098,7 +4103,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AITimeBox: {fileID: 384295344}
-  AILapBox: {fileID: 0}
   AIMinStats: {fileID: 758320546}
   AISecStats: {fileID: 689221151}
   AIMilliStats: {fileID: 1985646784}
