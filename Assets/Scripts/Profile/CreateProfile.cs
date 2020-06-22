@@ -77,7 +77,7 @@ public class CreateProfile : MonoBehaviour
             {
                 //ID 1 is free
                 indexAt = 1;
-                PlayerPrefs.SetInt("UserOneCoins", 100);
+                PlayerPrefs.SetInt("UserOneCoins", 10000);
             }
             else
             {
@@ -86,7 +86,7 @@ public class CreateProfile : MonoBehaviour
                 {
                     //ID 2 is free
                     indexAt = 2;
-                    PlayerPrefs.SetInt("UserTwoCoins", 100);
+                    PlayerPrefs.SetInt("UserTwoCoins", 10000);
                 }
                 else
                 {
@@ -94,7 +94,7 @@ public class CreateProfile : MonoBehaviour
                     if (PlayerPrefs.GetInt("UserThreeID") == 0)
                     {
                         indexAt = 3;
-                        PlayerPrefs.SetInt("UserThreeCoins", 100);
+                        PlayerPrefs.SetInt("UserThreeCoins", 10000);
                     }
                 }
             }
