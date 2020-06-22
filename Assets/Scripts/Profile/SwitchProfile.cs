@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 /// <summary>
-/// Changes current user values to the one selected
-/// Author: Maya Ashizumi-Munn
+/// (Update) Bernadette Cruz: Created Playerprefs "CurrentCoins" to output current profile's coins in menus
 /// </summary>
 public class SwitchProfile : MonoBehaviour
 {
@@ -10,21 +11,21 @@ public class SwitchProfile : MonoBehaviour
     {
         PlayerPrefs.SetInt("CurrentUserID", 1);
         PlayerPrefs.SetString("CurrentUsername", PlayerPrefs.GetString("UserOneName"));
-        PlayerPrefs.SetInt("CurrentUserCoins", PlayerPrefs.GetInt("UserOneCoins"));
+        PlayerPrefs.SetInt("CurrentCoins", PlayerPrefs.GetInt("UserOneCoins"));
         gameObject.AddComponent<MenuController>().MainMenu();
     }
     public void switchToUserTwo()
     {
         PlayerPrefs.SetInt("CurrentUserID", 2);
         PlayerPrefs.SetString("CurrentUsername", PlayerPrefs.GetString("UserTwoName"));
-        PlayerPrefs.SetInt("CurrentUserCoins", PlayerPrefs.GetInt("UserTwoCoins"));
+        PlayerPrefs.SetInt("CurrentCoins", PlayerPrefs.GetInt("UserTwoCoins"));
         gameObject.AddComponent<MenuController>().MainMenu();
     }
     public void switchToUserThree()
     {
         PlayerPrefs.SetInt("CurrentUserID", 3);
         PlayerPrefs.SetString("CurrentUsername", PlayerPrefs.GetString("UserThreeName"));
-        PlayerPrefs.SetInt("CurrentUserCoins", PlayerPrefs.GetInt("UserThreeCoins"));
+        PlayerPrefs.SetInt("CurrentCoins", PlayerPrefs.GetInt("UserThreeCoins"));
         gameObject.AddComponent<MenuController>().MainMenu();
     }
 }

@@ -1,11 +1,13 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class PauseMenuController : MonoBehaviour
 {
     public GameObject Pausedmenu, PauseButton, SettingsMenu;
+    public GameObject InGameUICanvas; 
    
 
     public  void Pause()
@@ -13,6 +15,7 @@ public class PauseMenuController : MonoBehaviour
         Pausedmenu.SetActive(true);
         PauseButton.SetActive(false);
         SettingsMenu.SetActive(false);
+        InGameUICanvas.SetActive(false);
         Time.timeScale = 0;
       }
 
@@ -21,17 +24,19 @@ public class PauseMenuController : MonoBehaviour
         Pausedmenu.SetActive(false);
         PauseButton.SetActive(true);
         SettingsMenu.SetActive(false);
+        InGameUICanvas.SetActive(true);
         Time.timeScale = 1;
     }
 
     public void Quit()
     {
+        Time.timeScale = 1; 
         SceneManager.LoadScene((int)Menuscene.MainMenu);
-        SceneManager.LoadScene(0);
     }
 
     private enum Menuscene
     {
+        RaceScene1 = 1, 
         MainMenu = 0,
         Restart = 4
 
@@ -41,7 +46,7 @@ public class PauseMenuController : MonoBehaviour
     {
         Pausedmenu.SetActive(false);
         SettingsMenu.SetActive(false);
-        SceneManager.LoadScene((int)Menuscene.Restart);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
     }
 
@@ -55,6 +60,7 @@ public class PauseMenuController : MonoBehaviour
         Pausedmenu.SetActive(false);
         PauseButton.SetActive(false);
         SettingsMenu.SetActive(true);
+        InGameUICanvas.SetActive(false);
         Time.timeScale = 0;
     }
 
