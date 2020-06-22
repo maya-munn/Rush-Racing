@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Multiplayer/Mirror/Components/Discovery/NetworkDiscoveryBase.cs.meta
+guid: b9971d60ce61f4e39b07cd9e7e0c68fa
+=======
+guid: 20e7fc25c154fea4cb7cdf290441d052
+>>>>>>> master:Assets/Scripts/Garage/GarageManager.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
