@@ -561,6 +561,11 @@ PrefabInstance:
       propertyPath: RR
       value: 
       objectReference: {fileID: 1493410498}
+    - target: {fileID: 3011191661834387234, guid: 83bce934877671d428bf97b8f3d175b8,
+        type: 3}
+      propertyPath: carController
+      value: 
+      objectReference: {fileID: 1493410498}
     - target: {fileID: 3011191661834387235, guid: 83bce934877671d428bf97b8f3d175b8,
         type: 3}
       propertyPath: m_Name

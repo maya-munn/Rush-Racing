@@ -21,6 +21,8 @@ public class MenuController : MonoBehaviour
         Options = 7,
         Track1 = 8,
         Track2 = 9,
+        MultiplayerMenu = 10,
+        MultiplayerRaceTrack = 11
     }
 
     //**************************//
@@ -96,5 +98,14 @@ public class MenuController : MonoBehaviour
     public void OptionsMenu()
     {
         SceneManager.LoadScene((int)SceneIndex.Options);
+    }
+
+    public void MultiplayerMenu()
+    {
+        SceneManager.LoadScene((int)SceneIndex.MultiplayerMenu);
+    }
+    public void MultiplayerRaceTrack()
+    {
+        SceneManager.LoadScene((int)SceneIndex.MultiplayerRaceTrack);
     }
 }
