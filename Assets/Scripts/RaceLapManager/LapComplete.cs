@@ -29,11 +29,7 @@ public class LapComplete : MonoBehaviour
 
     //Will set the status of RaceFinish to true, which will unlock the last checkpoint which will throw up the scoreboard.
     public void Update(){
-<<<<<<< Updated upstream:Assets/Scripts/RaceLapManager/LapComplete.cs
     if (LapsDone == PlayerPrefs.GetInt("Laps")){
-=======
-    if (LapsDone == 0){
->>>>>>> Stashed changes:Assets/Scripts/LapComplete.cs
         RaceFinish.SetActive(true);
     }
     }

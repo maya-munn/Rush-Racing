@@ -19,12 +19,8 @@ public class MenuController : MonoBehaviour
         ProfileCreation = 5,
         ProfileList = 6,
         Options = 7,
-<<<<<<< Updated upstream
         Track1 = 8,
         Track2 = 9,
-=======
-        MultiplayerMenu = 8
->>>>>>> Stashed changes
     }
 
     //**************************//
@@ -100,10 +96,5 @@ public class MenuController : MonoBehaviour
     public void OptionsMenu()
     {
         SceneManager.LoadScene((int)SceneIndex.Options);
-    }
-
-    public void MultiplayerMenu()
-    {
-        SceneManager.LoadScene((int)SceneIndex.MultiplayerMenu);
     }
 }

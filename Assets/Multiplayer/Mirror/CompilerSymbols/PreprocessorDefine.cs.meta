@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Multiplayer/Mirror/CompilerSymbols/PreprocessorDefine.cs.meta
 guid: f1d66fe74ec6f42dd974cba37d25d453
+=======
+guid: d7495b581e1caec42958421b6a4157ef
+>>>>>>> master:Assets/Scripts/Garage/CarStats.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
