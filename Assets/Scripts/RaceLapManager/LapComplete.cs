@@ -32,6 +32,7 @@ public class LapComplete : MonoBehaviour
     if (LapsDone == PlayerPrefs.GetInt("Laps")){
         RaceFinish.SetActive(true);
         AIRaceFinish.SetActive(true);
+        gameObject.SetActive(false);
         }
     }
 

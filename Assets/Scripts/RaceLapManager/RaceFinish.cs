@@ -19,8 +19,8 @@ public class RaceFinish : MonoBehaviour
     public GameObject SecStats;
     public GameObject MilliStats;
     public GameObject CashEarned;
-    public GameObject LapCompleteCounter;
-    //public GameObject AIRaceFinish;
+    public GameObject AIRaceFinish;
+    public GameObject PlayerName;
 
 
     //Will put up the scoreboard when the Racefinish trigger is activated.
@@ -28,11 +28,10 @@ public class RaceFinish : MonoBehaviour
     {
         if (PlayerCar.tag == "Player")
         {
-            LapCompleteCounter.SetActive(false);
             LapBox.SetActive(false);
             TotalTimeBox.SetActive(false);
             StatsPanel.SetActive(true);
-            GameObject.Find("AIRaceFinish").SetActive(true);
+            AIRaceFinish.SetActive(true);
 
 
 
@@ -42,7 +41,7 @@ public class RaceFinish : MonoBehaviour
             MilliStats.GetComponent<Text>().text = TotalLapMilli.GetComponent<Text>().text;
 
             //Gets username and outputs to stats panel
-            GameObject.Find("PlayerName").GetComponent<Text>().text = PlayerPrefs.GetString("CurrentUsername");
+            PlayerName.GetComponent<Text>().text = PlayerPrefs.GetString("CurrentUsername");
 
             gameObject.AddComponent<CurrencyTable>().AddToUserCurrency(500);
             PlayerPrefs.SetInt("CurrentCoins", gameObject.GetComponent<CurrencyTable>().GetUserCurrency());
