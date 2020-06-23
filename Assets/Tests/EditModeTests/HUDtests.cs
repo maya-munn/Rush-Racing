@@ -24,7 +24,7 @@ namespace Tests
             int testLapsDone = 0;
             int scriptLapsDone = lapC.LapsDone;
 
-            lapC.OnTriggerEnter();
+           // lapC.OnTriggerEnter();
 
             testLapsDone++;
             Assert.AreEqual(testLapsDone, scriptLapsDone);

@@ -18,42 +18,52 @@ public class RaceFinish : MonoBehaviour
     public GameObject MinStats;
     public GameObject SecStats;
     public GameObject MilliStats;
-    public GameObject CashEarned;    
+    public GameObject CashEarned;
+    public GameObject LapCompleteCounter;
+    //public GameObject AIRaceFinish;
+
 
     //Will put up the scoreboard when the Racefinish trigger is activated.
-    void OnTriggerEnter()
+    void OnTriggerEnter(Collider PlayerCar)
+    {
+        if (PlayerCar.tag == "Player")
         {
-        LapBox.SetActive(false);
-        TotalTimeBox.SetActive(false);
-        StatsPanel.SetActive(true);
-        //AIRaceFinish.SetActive(true);
-        
+            LapCompleteCounter.SetActive(false);
+            LapBox.SetActive(false);
+            TotalTimeBox.SetActive(false);
+            StatsPanel.SetActive(true);
+            GameObject.Find("AIRaceFinish").SetActive(true);
 
 
-        //Update(Bernie) Takes the total lap time to be outputted next to the player's name in the stats panel
-        MinStats.GetComponent<Text>().text = TotalLapMins.GetComponent<Text>().text;
-        SecStats.GetComponent<Text>().text = TotalLapSecs.GetComponent<Text>().text;
-        MilliStats.GetComponent<Text>().text = TotalLapMilli.GetComponent<Text>().text;
 
-        gameObject.AddComponent<CurrencyTable>().AddToUserCurrency(500);
-        PlayerPrefs.SetInt("CurrentCoins", gameObject.GetComponent<CurrencyTable>().GetUserCurrency());
+            //Update(Bernie) Takes the total lap time to be outputted next to the player's name in the stats panel
+            MinStats.GetComponent<Text>().text = TotalLapMins.GetComponent<Text>().text;
+            SecStats.GetComponent<Text>().text = TotalLapSecs.GetComponent<Text>().text;
+            MilliStats.GetComponent<Text>().text = TotalLapMilli.GetComponent<Text>().text;
 
-        //update(Bernie) Outputs cash earned to Stats panel ---> hardcoded to $500 for now
-        CashEarned.GetComponent<Text>().text = "+$500";
+            //Gets username and outputs to stats panel
+            GameObject.Find("PlayerName").GetComponent<Text>().text = PlayerPrefs.GetString("CurrentUsername");
+
+            gameObject.AddComponent<CurrencyTable>().AddToUserCurrency(500);
+            PlayerPrefs.SetInt("CurrentCoins", gameObject.GetComponent<CurrencyTable>().GetUserCurrency());
+
+            //update(Bernie) Outputs cash earned to Stats panel ---> hardcoded to $500 for now
+            CashEarned.GetComponent<Text>().text = "+$500";
+
         }
 
-    /*
-    void OnTriggerEnter (Collider AIcar){
+        /*
+        void OnTriggerEnter (Collider AIcar){
 
-        if(AIcar.tag == "AI_Car"){
-            AITimeBox.SetActive(false);
+            if(AIcar.tag == "AI_Car"){
+                AITimeBox.SetActive(false);
 
-            AIMinStats.GetComponent<Text>().text = AILapMins.GetComponent<Text>().text;
-            AISecStats.GetComponent<Text>().text = AILapSecs.GetComponent<Text>().text;
-            AIMilliStats.GetComponent<Text>().text = AILapMilli.GetComponent<Text>().text;
+                AIMinStats.GetComponent<Text>().text = AILapMins.GetComponent<Text>().text;
+                AISecStats.GetComponent<Text>().text = AILapSecs.GetComponent<Text>().text;
+                AIMilliStats.GetComponent<Text>().text = AILapMilli.GetComponent<Text>().text;
+            }
         }
-    }
-    */
-        
+        */
+        }
     }
 

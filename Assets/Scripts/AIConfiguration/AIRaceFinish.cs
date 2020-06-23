@@ -13,15 +13,21 @@ public class AIRaceFinish : MonoBehaviour
     public GameObject AITotalLapMins;
     public GameObject AITotalLapSecs;
     public GameObject AITotalLapMilli;
-
+    public GameObject AIStatsBox;
+    public GameObject AIStatusText;
     void OnTriggerEnter(Collider AICar){
         if(AICar.tag == "AI_Car"){
             //AILapBox.SetActive(false);
             AITimeBox.SetActive(false);
-            
-            AIMinStats.GetComponent<Text>().text = AITotalLapMins.GetComponent<Text>().text;
-            AISecStats.GetComponent<Text>().text = AITotalLapSecs.GetComponent<Text>().text;
-            AIMilliStats.GetComponent<Text>().text = AITotalLapMilli.GetComponent<Text>().text;
+
+            //deactivate "Still in Race" text in stats panel when AI enters the finish line
+            AIStatusText.SetActive(false);
+
+            //Show AI's total lap time in stats panel
+            AIStatsBox.SetActive(true);
+            AITotalLapMins.GetComponent<Text>().text = AIMinStats.GetComponent<Text>().text;
+            AITotalLapSecs.GetComponent<Text>().text = AISecStats.GetComponent<Text>().text;
+            AITotalLapMilli.GetComponent<Text>().text = AIMilliStats.GetComponent<Text>().text;
         }
     }
 
