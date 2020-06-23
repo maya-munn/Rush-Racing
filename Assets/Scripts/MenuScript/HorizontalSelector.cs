@@ -34,10 +34,7 @@ public class HorizontalSelector : MonoBehaviour
 
 
         text = transform.Find("Text").GetComponent<TMPro.TextMeshProUGUI>();
-        if ( transform.Find("Image"))
-        {
-            image = transform.Find("Image").GetComponent<RawImage>();
-        }
+   
 
         // Debug.Log(MapListName.Count);
 

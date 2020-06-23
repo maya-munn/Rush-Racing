@@ -1,11 +1,5 @@
-﻿using JetBrains.Annotations;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 /// <summary>
 /// Contains methods to traverse through scenes and 
@@ -15,29 +9,24 @@ using UnityEngine.UI;
 /// </summary>
 public class MenuController : MonoBehaviour
 {
-    public GameObject MapSelected = default;
     public enum SceneIndex
     {
-        MainMenu = 0,
-        FreePlay = 1,
-        Tournament = 2,
-        Garage = 3,
-        Track1 = 4,
+        PreLoader = 0,
+        MainMenu = 1,
+        FreePlay = 2,
+        Tournament = 3,
+        Garage = 4,
         ProfileCreation = 5,
         ProfileList = 6,
         Options = 7,
-<<<<<<< HEAD
         Track1 = 8,
         Track2 = 9,
         MultiplayerMenu = 10,
         MultiplayerRaceTrack = 11
-=======
-        Track2 = 8
->>>>>>> parent of eeb3e238... fix + new/edited scenes
     }
 
     //**************************//
-
+    public GameObject MapSelected = default;
     public void MainMenu()
     {
         SceneManager.LoadScene((int)SceneIndex.MainMenu);
@@ -46,15 +35,16 @@ public class MenuController : MonoBehaviour
     public void FreePlayMode()
     {
         SceneManager.LoadScene((int)SceneIndex.FreePlay);
-       
+
     }
 
-    public void ProfileList(){
+    public void ProfileList()
+    {
         SceneManager.LoadScene((int)SceneIndex.ProfileList);
     }
 
 
-public void TournamentMode()
+    public void TournamentMode()
     {
         SceneManager.LoadScene((int)SceneIndex.Tournament);
     }
@@ -84,12 +74,12 @@ public void TournamentMode()
     public void StartButton()
     {
         if (MapSelected == null) return;
-       int map = MapSelected.GetComponent<HorizontalSelector>().index;
+        int map = MapSelected.GetComponent<HorizontalSelector>().index;
 
-        if(map == 0)
+        if (map == 0)
             SceneManager.LoadScene((int)SceneIndex.Track1);
 
-        else if(map == 1)
+        else if (map == 1)
             SceneManager.LoadScene((int)SceneIndex.Track2);
     }
 
@@ -108,5 +98,14 @@ public void TournamentMode()
     public void OptionsMenu()
     {
         SceneManager.LoadScene((int)SceneIndex.Options);
+    }
+
+    public void MultiplayerMenu()
+    {
+        SceneManager.LoadScene((int)SceneIndex.MultiplayerMenu);
+    }
+    public void MultiplayerRaceTrack()
+    {
+        SceneManager.LoadScene((int)SceneIndex.MultiplayerRaceTrack);
     }
 }
