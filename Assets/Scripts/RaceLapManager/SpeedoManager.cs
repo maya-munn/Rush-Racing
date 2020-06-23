@@ -13,12 +13,12 @@ public class SpeedoManager : MonoBehaviour
     private float endPos = -46f;
     private float currentPos;
     public float carSpeed;
-    public CarController carController;
+    public CarController RR;
 
     // A speed variable created in the CarController script, made with rigidbody.velocity.magnitude
     void FixedUpdate()
     {
-        carSpeed = carController.speed;
+        carSpeed = RR.speed;
         updateNeedle();
     }
 

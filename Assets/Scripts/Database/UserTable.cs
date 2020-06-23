@@ -119,7 +119,6 @@ public class UserTable : MonoBehaviour
 
 				PlayerPrefs.SetString("CurrentUsername", username);
 				PlayerPrefs.SetInt("CurrentUserID", userID);
-				PlayerPrefs.SetInt("CurrentUserCoins", PlayerPrefs.GetInt("UserOneCoins"));
 				break;
 			case 2:
 				PlayerPrefs.SetString("UserTwoName", username);
@@ -128,7 +127,6 @@ public class UserTable : MonoBehaviour
 
 				PlayerPrefs.SetString("CurrentUsername", username);
 				PlayerPrefs.SetInt("CurrentUserID", userID);
-				PlayerPrefs.SetInt("CurrentUserCoins", PlayerPrefs.GetInt("UserTwoCoins"));
 				break;
 			case 3:
 				PlayerPrefs.SetString("UserThreeName", username);
@@ -137,7 +135,6 @@ public class UserTable : MonoBehaviour
 
 				PlayerPrefs.SetString("CurrentUsername", username);
 				PlayerPrefs.SetInt("CurrentUserID", userID);
-				PlayerPrefs.SetInt("CurrentUserCoins", PlayerPrefs.GetInt("UserThreeCoins"));
 				break;
 		}
 	}

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 1fe62e435a0f6ab4684cf35939328f3a
+=======
+guid: d7178f73764b8fd4fbc037ad852c30ef
+>>>>>>> parent of eeb3e238... fix + new/edited scenes
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

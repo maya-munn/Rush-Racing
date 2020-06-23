@@ -1,11 +1,8 @@
 {
     "name": "GameAssembly",
     "references": [
-        "GUID:6055be8ebefd69e48b49212b09b47b2f",
-        "GUID:30817c1a0e6d646d99c048fc403f5979",
-        "GUID:4c5f42e80a9914c1dabc370c6b18d9d2",
-        "GUID:75469ad4d38634e559750d17036d5f7c",
-        "GUID:4307f53044263cf4b835bd812fc161a4"
+        "GUID:d18adb9d10e915147acec7137f820d61",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

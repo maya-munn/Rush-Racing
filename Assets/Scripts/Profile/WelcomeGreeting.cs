@@ -20,7 +20,7 @@ public class WelcomeGreeting : MonoBehaviour
         if (userExists)
         {
             //Get username 
-            username = GetComponent<UserTable>().GetCurrentUsername();
+            username = new UserTable().GetCurrentUsername();
         }
 
         //Check if null
