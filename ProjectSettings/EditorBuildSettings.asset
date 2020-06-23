@@ -41,7 +41,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Multiplayer/MultiplayerRaceTrack.unity
     guid: a32d3141a0f56cf4a9b6d97fb5c9e69f
-  - enabled: 1
-    path: Assets/Scenes/Tracks/MobileTest.unity
-    guid: 786b07d3c8225e7409dd2a2f4eab07c4
   m_configObjects: {}

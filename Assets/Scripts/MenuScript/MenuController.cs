@@ -22,9 +22,7 @@ public class MenuController : MonoBehaviour
         Track1 = 8,
         Track2 = 9,
         MultiplayerMenu = 10,
-        MultiplayerRaceTrack = 11,
-        MobileTest = 12,
-        MobileGyroTest = 13
+        MultiplayerRaceTrack = 11
     }
 
     //**************************//
@@ -85,15 +83,6 @@ public class MenuController : MonoBehaviour
             SceneManager.LoadScene((int)SceneIndex.Track2);
     }
 
-
-    public void mobileStartGame()
-    {
-        SceneManager.LoadScene((int)SceneIndex.MobileTest);
-    }
-    public void mobilegyroStartGame()
-    {
-        SceneManager.LoadScene((int)SceneIndex.MobileGyroTest);
-    }
 
 
     public void CreateProfileMenu()
