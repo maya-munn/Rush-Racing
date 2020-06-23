@@ -19,6 +19,7 @@ public class Countdown : MonoBehaviour
     public GameObject LapTimer;
     public GameObject TotalLapTimer;
     public GameObject TotalLaps;
+    public GameObject AILapTimer;
     public GameObject CarController;
 
     //On start, calls the animation
@@ -53,6 +54,7 @@ public class Countdown : MonoBehaviour
         GoAudio.Play();
         LapTimer.SetActive(true);
         TotalLapTimer.SetActive(true);
+        AILapTimer.SetActive(true);
         CarController.SetActive(true);
 
         //Start music half of a second after race starts

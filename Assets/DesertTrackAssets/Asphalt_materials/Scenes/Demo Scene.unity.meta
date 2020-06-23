@@ -1,5 +1,8 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+guid: e7fc479fd3bcd4185a7aef031c7b7355
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD:Assets/DesertTrackAssets/Asphalt_materials/Scenes/Demo Scene.unity.meta
 guid: e7fc479fd3bcd4185a7aef031c7b7355
 =======
@@ -7,6 +10,7 @@ guid: 2aae7a378b710004dab327c84ee17085
 >>>>>>> master:Assets/Models/Cars/FordGT/FordGT.blend1.meta
 =======
 guid: e7fc479fd3bcd4185a7aef031c7b7355
+>>>>>>> master
 >>>>>>> master
 DefaultImporter:
   externalObjects: {}

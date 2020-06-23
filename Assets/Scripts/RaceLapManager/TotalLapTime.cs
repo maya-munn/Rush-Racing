@@ -18,16 +18,12 @@ public class TotalLapTime : MonoBehaviour
 
 	public static float RawTime;
 
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         TotalMilliCount += Time.deltaTime * 10;
 		RawTime += Time.deltaTime;
+		
 		TotalMilliDisplay = TotalMilliCount.ToString("F0");
         TotalMilliBox.GetComponent<Text>().text = "" + TotalMilliDisplay;
 

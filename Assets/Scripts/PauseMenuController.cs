@@ -12,20 +12,20 @@ public class PauseMenuController : MonoBehaviour
 
     public  void Pause()
        {
+        Time.timeScale = 0;
         Pausedmenu.SetActive(true);
         PauseButton.SetActive(false);
         SettingsMenu.SetActive(false);
         InGameUICanvas.SetActive(false);
-        Time.timeScale = 0;
       }
 
     public void Resume()
     {
+        Time.timeScale = 1;
         Pausedmenu.SetActive(false);
         PauseButton.SetActive(true);
         SettingsMenu.SetActive(false);
         InGameUICanvas.SetActive(true);
-        Time.timeScale = 1;
     }
 
     public void Quit()
