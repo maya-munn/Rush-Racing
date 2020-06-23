@@ -18,15 +18,18 @@ public class MenuController : MonoBehaviour
     public GameObject MapSelected = default;
     public enum SceneIndex
     {
-        MainMenu = 0,
-        FreePlay = 1,
-        Tournament = 2,
-        Garage = 3,
-        Track1 = 4,
-        ProfileCreation = 5,
-        ProfileList = 6,
-        Options = 7,
-        Track2 = 8
+        WelcomeScene = 0,
+        MainMenu = 1,
+        FreePlay = 2,
+        Tournament = 3,
+        Garage = 4,
+        Track1 = 5,
+        ProfileCreation = 6,
+        ProfileList = 7,
+        Options = 8,
+        Track2 = 9,
+        MultiplayerMenu = 10,
+        MultiplayerRaceTrack = 11
     }
 
     //**************************//
@@ -101,5 +104,14 @@ public void TournamentMode()
     public void OptionsMenu()
     {
         SceneManager.LoadScene((int)SceneIndex.Options);
+    }
+
+    public void MultiplayerMenu()
+    {
+        SceneManager.LoadScene((int)SceneIndex.MultiplayerMenu);
+    }
+    public void MultiplayerRaceTrack()
+    {
+        SceneManager.LoadScene((int)SceneIndex.MultiplayerRaceTrack);
     }
 }

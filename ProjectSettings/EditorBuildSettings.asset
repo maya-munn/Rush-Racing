@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/StartGame.unity
+    guid: b382e512233e1684cad797c0dc3784e8
+  - enabled: 1
     path: Assets/Scenes/Menu/MainMenu.unity
     guid: 4e8f1d88bf18a8e4eb8dbc79b4c1fb5a
   - enabled: 1
@@ -32,4 +35,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tracks/DesertTrack.unity
     guid: 24185e654a0c2b54dbbe581577d5368b
+  - enabled: 1
+    path: Assets/Multiplayer/MultiplayerMenu.unity
+    guid: e2f3bf607de391643aa2b9bb8bb5a85e
+  - enabled: 1
+    path: Assets/Multiplayer/MultiplayerRaceTrack.unity
+    guid: a32d3141a0f56cf4a9b6d97fb5c9e69f
   m_configObjects: {}
