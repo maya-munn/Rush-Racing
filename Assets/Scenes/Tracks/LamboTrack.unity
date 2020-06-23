@@ -2810,7 +2810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   needle: {fileID: 2086967467}
   carSpeed: 0
-  RR: {fileID: 1277674763364456518}
+  carController: {fileID: 1277674763364456518}
 --- !u!4 &587389394
 Transform:
   m_ObjectHideFlags: 0
@@ -3896,6 +3896,7 @@ MonoBehaviour:
   LapCounter: {fileID: 1253535172}
   LapsDone: 0
   RaceFinish: {fileID: 1059457429}
+  AIRaceFinish: {fileID: 0}
 --- !u!65 &838475100
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4998,13 +4999,7 @@ MonoBehaviour:
   SecStats: {fileID: 1176486323}
   MilliStats: {fileID: 1478653477}
   CashEarned: {fileID: 129880678}
-  AITimeBox: {fileID: 0}
-  AILapMins: {fileID: 0}
-  AILapSecs: {fileID: 0}
-  AILapMilli: {fileID: 0}
-  AIMinStats: {fileID: 0}
-  AISecStats: {fileID: 0}
-  AIMilliStats: {fileID: 0}
+  LapCompleteCounter: {fileID: 0}
 --- !u!65 &1059457431
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12358,6 +12353,7 @@ MonoBehaviour:
   Pausedmenu: {fileID: 5363683703342149485}
   PauseButton: {fileID: 5363683704645188336}
   SettingsMenu: {fileID: 5363683704810639757}
+  InGameUICanvas: {fileID: 0}
 --- !u!114 &5363683704146275297
 MonoBehaviour:
   m_ObjectHideFlags: 0
