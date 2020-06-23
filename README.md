@@ -5,6 +5,8 @@ Rush Racing - an Android and PC racing game. Developed by The Fast and The Curio
 
 [Click here to play Rush Racing now!](https://www.rushracing.fun/playgame) [https://www.rushracing.fun/playgame](https://www.rushracing.fun/playgame)
 
+[Click here to download Rush Racing for PC!](https://mega.nz/folder/xyh1TAiD#fF3wkMhw4sXRGEzGLVaJVg) [https://mega.nz/folder/xyh1TAiD#fF3wkMhw4sXRGEzGLVaJVg](https://mega.nz/folder/xyh1TAiD#fF3wkMhw4sXRGEzGLVaJVg)
+
 ## Overview:
 Racing games have been a concept in the gaming world for decades and have entered the mobile gaming world several years ago. Over the years, newer technology has been developed to improve the overall gaming experience for these racing games. 
 
